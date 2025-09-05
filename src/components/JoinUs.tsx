@@ -157,7 +157,7 @@ const JoinUs = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Card className="h-full bg-white shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-university-red to-university-red-light text-white">
+              <CardHeader className="bg-gradient-to-r from-university-red to-university-red-light text-university-red">
                 <CardTitle className="font-montserrat font-bold text-2xl flex items-center gap-3">
                   <CheckCircle size={28} />
                   Prérequis d'admission
@@ -190,7 +190,7 @@ const JoinUs = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Card className="h-full bg-white shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-university-red to-university-red-light text-white">
+              <CardHeader className="bg-gradient-to-r from-university-red to-university-red-light text-university-red">
                 <CardTitle className="font-montserrat font-bold text-2xl flex items-center gap-3">
                   <FileText size={28} />
                   Documents requis
