@@ -1,12 +1,13 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import ProgramPresentation from '@/components/ProgramPresentation';
-import Tracks from '@/components/Tracks';
-import Curriculum from '@/components/Curriculum';
-import Careers from '@/components/Careers';
-import Partners from '@/components/Partners';
-import Projects from '@/components/Projects';
-import JoinUs from '@/components/JoinUs';
+import Careers from "@/components/Careers";
+import Curriculum from "@/components/Curriculum";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import JoinUs from "@/components/JoinUs";
+import Partners from "@/components/Partners";
+import ProgramPresentation from "@/components/ProgramPresentation";
+import Projects from "@/components/Projects";
+import Tracks from "@/components/Tracks";
 
 export default function Index() {
   return (
@@ -20,6 +21,7 @@ export default function Index() {
       <Partners />
       <Projects />
       <JoinUs />
+      <Footer></Footer>
     </div>
   );
 }
