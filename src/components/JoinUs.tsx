@@ -1,43 +1,50 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Calendar, FileText, Users, CheckCircle, Clock, MapPin, Mail, Phone } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { motion, useInView } from "framer-motion";
+import { Calendar, CheckCircle, Clock, FileText, Users } from "lucide-react";
+import { useRef } from "react";
 
 const JoinUs = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.2 });
+  const isInView = useInView(ref, { once: true });
 
   const admissionSteps = [
     {
       icon: FileText,
       title: "Dossier de candidature",
-      description: "Soumettez votre dossier complet avec relevés de notes et lettre de motivation",
+      description:
+        "Soumettez votre dossier complet avec relevés de notes et lettre de motivation",
       deadline: "15 Mars 2024",
-      status: "required"
+      status: "required",
     },
     {
       icon: Users,
       title: "Entretien de motivation",
-      description: "Entretien individuel avec l'équipe pédagogique (30 minutes)",
+      description:
+        "Entretien individuel avec l'équipe pédagogique (30 minutes)",
       deadline: "Avril 2024",
-      status: "conditional"
+      status: "conditional",
     },
     {
       icon: CheckCircle,
       title: "Tests techniques",
       description: "Évaluation des compétences en mathématiques et logique",
       deadline: "Mai 2024",
-      status: "conditional"
+      status: "conditional",
     },
     {
       icon: Calendar,
       title: "Résultats d'admission",
       description: "Notification des résultats et procédure d'inscription",
       deadline: "Juin 2024",
-      status: "final"
-    }
+      status: "final",
+    },
   ];
 
   const requirements = [
@@ -45,7 +52,7 @@ const JoinUs = () => {
     "Moyenne générale ≥ 12/20",
     "Bon niveau en mathématiques",
     "Motivation pour l'informatique",
-    "Niveau B2 en anglais recommandé"
+    "Niveau B2 en anglais recommandé",
   ];
 
   const documents = [
@@ -54,17 +61,20 @@ const JoinUs = () => {
     "Relevés de notes post-bac (si applicable)",
     "Lettre de motivation personnalisée",
     "CV détaillé",
-    "Lettres de recommandation (optionnel)"
+    "Lettres de recommandation (optionnel)",
   ];
 
   return (
     <section id="rejoindre" className="py-20 bg-white relative overflow-hidden">
       {/* Background tech pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, #991b1b 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }}></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, #991b1b 1px, transparent 0)`,
+            backgroundSize: "40px 40px",
+          }}
+        ></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -79,8 +89,9 @@ const JoinUs = () => {
             Comment nous rejoindre ?
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Intégrez notre formation d'excellence et donnez vie à vos ambitions dans le domaine de l'informatique. 
-            Découvrez notre processus d'admission transparent et nos critères de sélection.
+            Intégrez notre formation d'excellence et donnez vie à vos ambitions
+            dans le domaine de l'informatique. Découvrez notre processus
+            d'admission transparent et nos critères de sélection.
           </p>
         </motion.div>
 
@@ -99,7 +110,9 @@ const JoinUs = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                }
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
               >
@@ -156,7 +169,9 @@ const JoinUs = () => {
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                      animate={
+                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                      }
                       transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
                       className="flex items-center gap-3 font-montserrat text-gray-700"
                     >
@@ -187,7 +202,9 @@ const JoinUs = () => {
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                      animate={
+                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                      }
                       transition={{ duration: 0.4, delay: 1 + index * 0.1 }}
                       className="flex items-center gap-3 font-montserrat text-gray-700"
                     >
@@ -206,7 +223,7 @@ const JoinUs = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="bg-gradient-to-r from-university-red to-university-red-light text-white p-8 rounded-2xl"
+          className="bg-gradient-to-r from-university-red to-university-red-light text-black p-8 rounded-2xl"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -214,22 +231,9 @@ const JoinUs = () => {
                 Prêt à candidater ?
               </h3>
               <p className="text-xl font-montserrat mb-6 opacity-90">
-                Rejoignez notre communauté d'étudiants passionnés et lancez votre carrière dans l'informatique !
+                Rejoignez notre communauté d'étudiants passionnés et lancez
+                votre carrière dans l'informatique !
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Mail size={20} />
-                  <span className="font-montserrat">admission@universite-info.fr</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone size={20} />
-                  <span className="font-montserrat">+33 1 23 45 67 89</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin size={20} />
-                  <span className="font-montserrat">Campus Universitaire, Bâtiment Informatique</span>
-                </div>
-              </div>
             </div>
             <div className="text-center">
               <motion.div

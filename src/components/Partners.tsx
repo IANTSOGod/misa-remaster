@@ -1,60 +1,74 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Building2, Handshake, Users, Award } from 'lucide-react';
+import { motion, useInView } from "framer-motion";
+import { Award, Building2, Handshake, Users } from "lucide-react";
+import { useRef } from "react";
 
 const Partners = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.2 });
+  const isInView = useInView(ref, { once: true });
 
   const partners = [
     {
       category: "Grandes Entreprises",
       companies: ["Microsoft", "Google", "Amazon", "IBM", "Oracle", "SAP"],
-      color: "from-blue-500 to-blue-600"
+      color: "from-blue-500 to-blue-600",
     },
     {
       category: "Startups & Scale-ups",
-      companies: ["Criteo", "BlaBlaCar", "Doctolib", "Deezer", "Klarna", "Revolut"],
-      color: "from-green-500 to-green-600"
+      companies: [
+        "Criteo",
+        "BlaBlaCar",
+        "Doctolib",
+        "Deezer",
+        "Klarna",
+        "Revolut",
+      ],
+      color: "from-green-500 to-green-600",
     },
     {
       category: "ESN & Consulting",
-      companies: ["Capgemini", "Accenture", "Sopra Steria", "Atos", "CGI", "Deloitte"],
-      color: "from-purple-500 to-purple-600"
+      companies: [
+        "Capgemini",
+        "Accenture",
+        "Sopra Steria",
+        "Atos",
+        "CGI",
+        "Deloitte",
+      ],
+      color: "from-purple-500 to-purple-600",
     },
     {
       category: "Institutions",
       companies: ["INRIA", "CNRS", "CEA", "ANSSI", "Pôle Emploi", "La Poste"],
-      color: "from-red-500 to-red-600"
-    }
+      color: "from-red-500 to-red-600",
+    },
   ];
 
   const partnerships = [
     {
       icon: Handshake,
       title: "Stages & Alternance",
-      description: "Plus de 200 offres de stages et contrats d'alternance par an",
-      number: "200+"
+      description:
+        "Plus de 200 offres de stages et contrats d'alternance par an",
+      number: "200+",
     },
     {
       icon: Users,
       title: "Interventions Professionnelles",
       description: "Experts du secteur intervenant dans nos cours",
-      number: "50+"
+      number: "50+",
     },
     {
       icon: Building2,
       title: "Entreprises Partenaires",
       description: "Réseau d'entreprises pour l'insertion professionnelle",
-      number: "150+"
+      number: "150+",
     },
     {
       icon: Award,
       title: "Projets Collaboratifs",
       description: "Projets réels menés avec nos partenaires industriels",
-      number: "30+"
-    }
+      number: "30+",
+    },
   ];
 
   return (
@@ -71,8 +85,9 @@ const Partners = () => {
             Nos partenaires
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Un réseau d'entreprises prestigieuses qui nous font confiance pour former 
-            les talents de demain et offrir des opportunités exceptionnelles à nos étudiants.
+            Un réseau d'entreprises prestigieuses qui nous font confiance pour
+            former les talents de demain et offrir des opportunités
+            exceptionnelles à nos étudiants.
           </p>
         </motion.div>
 
@@ -86,7 +101,9 @@ const Partners = () => {
             <motion.div
               key={index}
               initial={{ scale: 0.8, opacity: 0 }}
-              animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+              animate={
+                isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }
+              }
               transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
               whileHover={{ y: -10, scale: 1.05 }}
               className="text-center p-6 bg-gradient-to-br from-red-50 to-red-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
@@ -130,8 +147,13 @@ const Partners = () => {
                     <motion.div
                       key={companyIndex}
                       initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                      transition={{ duration: 0.4, delay: 0.8 + categoryIndex * 0.1 + companyIndex * 0.05 }}
+                      animate={
+                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                      }
+                      transition={{
+                        duration: 0.4,
+                        delay: 0.8 + categoryIndex * 0.1 + companyIndex * 0.05,
+                      }}
                       whileHover={{ x: 5, scale: 1.02 }}
                       className="p-3 bg-gray-50 rounded-lg hover:bg-red-50 transition-colors duration-200 cursor-pointer"
                     >
@@ -150,13 +172,14 @@ const Partners = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-16 text-center bg-gradient-to-r from-university-red to-university-red-light text-white p-8 rounded-2xl"
+          className="mt-16 text-center bg-gradient-to-r from-university-red to-university-red-light p-8 rounded-2xl"
         >
-          <h3 className="text-3xl font-dancing font-bold mb-4">
+          <h3 className="text-3xl font-dancing font-bold mb-4 text-university-red">
             Rejoignez notre réseau de partenaires
           </h3>
-          <p className="text-xl font-montserrat mb-6 opacity-90">
-            Vous êtes une entreprise ? Collaborez avec nous pour former les talents de demain
+          <p className="text-xl font-montserrat mb-6 opacity-90 text-black">
+            Vous êtes une entreprise ? Collaborez avec nous pour former les
+            talents de demain
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
