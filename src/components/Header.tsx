@@ -114,14 +114,12 @@ const Header = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-2">
             {navItems.map((item) => (
               <div
                 key={item.id}
                 className="relative"
-                onMouseEnter={() => setHoveredDropdown(item.id)} // ouvre au hover
-                onMouseLeave={() => setHoveredDropdown("")} // ferme quand souris sort
+                onClick={() => setHoveredDropdown(item.id)} // ouvre au hover
               >
                 <motion.button
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl font-montserrat font-semibold transition-all duration-300 ${
@@ -159,6 +157,7 @@ const Header = () => {
                         ? "pointer-events-auto"
                         : "pointer-events-none"
                     }`}
+                    onMouseLeave={() => setHoveredDropdown("")}
                   >
                     {item.dropdownItems.map((dropItem, index) => (
                       <motion.button
