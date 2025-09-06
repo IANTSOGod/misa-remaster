@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { semesters } from "@/constants/semester";
 import { motion, useInView } from "framer-motion";
 import { Award, BookOpen, Clock, Users } from "lucide-react";
 import { useRef } from "react";
@@ -13,125 +14,6 @@ import { useRef } from "react";
 const Curriculum = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-  const semesters = {
-    L1: [
-      {
-        semester: "Semestre 1",
-        modules: [
-          { name: "Mathématiques générales", credits: 6, hours: 60 },
-          { name: "Technique de communication", credits: 6, hours: 60 },
-          { name: "Base de la programmaition", credits: 6, hours: 60 },
-          { name: "Prise en main Unix/Linux", credits: 6, hours: 60 },
-          { name: "Physique", credits: 3, hours: 30 },
-        ],
-      },
-      {
-        semester: "Semestre 2",
-        modules: [
-          { name: "Mathématiques appliqué à l'informatique", credits: 6, hours: 60 },
-          { name: "Combinoatoire et probabilités", credits: 6, hours: 60 },
-          { name: "Communication audio-visuel", credits: 6, hours: 60 },
-          { name: "Langage C", credits: 6, hours: 60 },
-          { name: "Linux et logiciel", credits: 3, hours: 30 },
-          { name: "Éléctromécanique", credits: 3, hours: 30 },
-        ],
-      },
-    ],
-    L2: [
-      {
-        semester: "Semestre 3",
-        modules: [
-          { name: "Fabrication numérique", credits: 6, hours: 60 },
-          { name: "Architecture réseau et système", credits: 6, hours: 60 },
-          { name: "Langue et entrepreunariat", credits: 6, hours: 60 },
-          { name: "Probabilités et statistiques", credits: 6, hours: 60 },
-          { name: "Architecture des ordinateurs", credits: 3, hours: 30 },
-        ],
-      },
-      {
-        semester: "Semestre 4",
-        modules: [
-          { name: "Réseau,système et base de donnée", credits: 6, hours: 60 },
-          { name: "Programmation orienté objet", credits: 6, hours: 60 },
-          { name: "Comptabilité et management", credits: 6, hours: 60 },
-          { name: "Bases de données avancées", credits: 6, hours: 60 },
-          { name: "Web et multimédia", credits: 3, hours: 120 },
-          { name: "Probabilité et statistques", credits: 3, hours: 30 },
-        ],
-      },
-    ],
-    L3: [
-      {
-        semester: "Semestre 5",
-        modules: [
-          { name: "Mathématiques", credits: 9, hours: 90 },
-          { name: "Études des probabilités et statistques", credits: 9, hours: 90 },
-          { name: "Développement informatique", credits: 3, hours: 30 },
-          { name: "Synthèse informatique", credits: 3, hours: 30 },
-          { name: "Architecture machine", credits: 3, hours: 30 },
-          { name: "Économie", credits: 3, hours: 30 },
-          { name: "Langues", credits: 3, hours: 30 },
-
-        ],
-      },
-      {
-        semester: "Semestre 6",
-        modules: [
-          { name: "Technologie web", credits: 12, hours: 120 },
-          { name: "Économie", credits: 12, hours: 240 },
-          { name: "Langues", credits: 6, hours: 60 },
-          { name: "Mathématiques", credits: 6, hours: 60 },
-          { name: "Développement", credits: 6, hours: 60 },
-          { name: "Synthèse informatique", credits: 6, hours: 60 },
-          { name: "Probabilités", credits: 6, hours: 60 },
-
-        ],
-      },
-    ],
-    M1: [
-      {
-        semester: "Semestre 7",
-        modules: [
-          { name: "Modélisatoin et conception d'objet", credits: 9, hours: 90 },
-          { name: "Modélisation et calcul scientifique", credits: 9, hours: 90 },
-          { name: "Management de projet informatique", credits: 3, hours: 30 },
-          { name: "Web service , XML ", credits: 3, hours: 30 },
-          { name: "Développement colaboratif", credits: 3, hours: 30 },
-        ],
-      },
-      {
-        semester: "Semestre 8",
-        modules: [
-          { name: "Algorithme avancée", credits: 12, hours: 120 },
-          { name: "Introduction à l'apprentissage automatique", credits: 12, hours: 240 },
-          { name: "Optimisatoin combinatoire avancée", credits: 6, hours: 60 },
-          { name: "Base de données réparties", credits: 6, hours: 60 },
-          { name: "Introduction à la vision par ordinateur", credits: 6, hours: 60 },
-          { name: "Entreprenariat  ", credits: 6, hours: 60 },
-        ],
-      },
-    ],
-    M2: [
-      {
-        semester: "Semestre 9",
-        modules: [
-          { name: "Préparation à l'environnement professionnel", credits: 9, hours: 90 },
-          { name: "Développement mobile et embarqué", credits: 9, hours: 90 },
-          { name: "Intégration;vérification,validation,qualification", credits: 3, hours: 30 },
-          { name: "Ingénierie de modèle", credits: 3, hours: 30 },
-        ],
-      },
-      {
-        semester: "Semestre 10",
-        modules: [
-          { name: "Projet de fin d'études", credits: 12, hours: 120 },
-          { name: "Stage long en entreprise", credits: 12, hours: 240 },
-          { name: "Mémoire et soutenance", credits: 6, hours: 60 },
-        ],
-      },
-    ],
-  };
 
   return (
     <section
@@ -153,7 +35,7 @@ const Curriculum = () => {
             Programmes par semestre
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Un cursus progressif sur 3 années pour acquérir toutes les
+            Un cursus progressif sur 5 années pour acquérir toutes les
             compétences nécessaires à votre réussite professionnelle.
           </p>
         </motion.div>
@@ -171,7 +53,7 @@ const Curriculum = () => {
         data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
         data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
-                Licence 1
+                L1
               </TabsTrigger>
               <TabsTrigger
                 value="L2"
@@ -179,7 +61,7 @@ const Curriculum = () => {
         data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
         data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
-                Licence 2
+                L2
               </TabsTrigger>
               <TabsTrigger
                 value="L3"
@@ -187,7 +69,7 @@ const Curriculum = () => {
         data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
         data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
-                Licence 3
+                L3
               </TabsTrigger>
               <TabsTrigger
                 value="M1"
@@ -195,7 +77,7 @@ const Curriculum = () => {
         data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
         data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
-                Master 1
+                M1
               </TabsTrigger>
               <TabsTrigger
                 value="M2"
@@ -203,7 +85,7 @@ const Curriculum = () => {
         data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
         data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
-                Master 2
+                M2
               </TabsTrigger>
             </TabsList>
 
@@ -296,7 +178,7 @@ const Curriculum = () => {
             {
               icon: BookOpen,
               title: "180 crédits ECTS",
-              description: "Formation complète reconnue en Europe",
+              description: "Formation complète reconnue à l'international",
             },
             {
               icon: Users,

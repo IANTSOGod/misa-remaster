@@ -38,7 +38,7 @@ const Hero = () => {
           className="max-w-6xl mx-auto"
         >
           <motion.h1
-            className="text-6xl md:text-8xl font-dancing font-bold gradient-text mb-6"
+            className="text-6xl md:text-8xl font-dancing font-bold gradient-text mb-8"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}

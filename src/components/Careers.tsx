@@ -1,12 +1,16 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Briefcase, TrendingUp, MapPin, DollarSign } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Careers = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.2 });
+  const isInView = useInView(ref, { once: true });
 
   const careers = [
     {
@@ -14,43 +18,43 @@ const Careers = () => {
       salary: "35-55k€",
       growth: "+15%",
       description: "Conception et développement d'applications web complètes",
-      companies: ["Startups", "ESN", "Grandes entreprises"]
+      companies: ["Startups", "ESN", "Grandes entreprises"],
     },
     {
       title: "Data Scientist",
       salary: "45-70k€",
       growth: "+25%",
       description: "Analyse de données et développement d'algorithmes d'IA",
-      companies: ["GAFAM", "Banques", "Consulting"]
+      companies: ["GAFAM", "Banques", "Consulting"],
     },
     {
       title: "Expert Cybersécurité",
       salary: "50-80k€",
       growth: "+30%",
       description: "Protection des systèmes et audit de sécurité",
-      companies: ["ANSSI", "Défense", "Cybersécurité"]
+      companies: ["ANSSI", "Défense", "Cybersécurité"],
     },
     {
       title: "Architecte Cloud",
       salary: "55-85k€",
       growth: "+20%",
       description: "Conception d'infrastructures cloud et DevOps",
-      companies: ["AWS", "Microsoft", "Google"]
+      companies: ["AWS", "Microsoft", "Google"],
     },
     {
       title: "Chef de Projet IT",
       salary: "40-65k€",
       growth: "+12%",
       description: "Management d'équipes et pilotage de projets",
-      companies: ["Tous secteurs", "ESN", "Consulting"]
+      companies: ["Tous secteurs", "ESN", "Consulting"],
     },
     {
       title: "Entrepreneur Tech",
       salary: "Variable",
       growth: "+∞",
       description: "Création de startups et innovation technologique",
-      companies: ["Startup", "Incubateurs", "Freelance"]
-    }
+      companies: ["Startup", "Incubateurs", "Freelance"],
+    },
   ];
 
   const sectors = [
@@ -59,11 +63,14 @@ const Careers = () => {
     { name: "Santé", percentage: 15, color: "bg-red-300" },
     { name: "Industrie", percentage: 12, color: "bg-red-200" },
     { name: "Consulting", percentage: 10, color: "bg-red-100" },
-    { name: "Autres", percentage: 8, color: "bg-gray-200" }
+    { name: "Autres", percentage: 8, color: "bg-gray-200" },
   ];
 
   return (
-    <section id="debouches" className="py-20 bg-gradient-to-br from-gray-50 to-red-50">
+    <section
+      id="debouches"
+      className="py-20 bg-gradient-to-br from-gray-50 to-red-50"
+    >
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -76,8 +83,8 @@ const Careers = () => {
             Débouchés professionnels
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Nos diplômés intègrent les meilleures entreprises du secteur technologique 
-            avec des perspectives d'évolution exceptionnelles.
+            Nos diplômés intègrent les meilleures entreprises du secteur
+            technologique avec des perspectives d'évolution exceptionnelles.
           </p>
         </motion.div>
 
@@ -96,7 +103,9 @@ const Careers = () => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                  }
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   whileHover={{ y: -5, scale: 1.02 }}
                 >
@@ -153,7 +162,9 @@ const Careers = () => {
             </motion.h3>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              animate={
+                isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+              }
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-white p-6 rounded-xl shadow-lg"
             >
@@ -177,7 +188,11 @@ const Careers = () => {
                     <div className="w-full bg-gray-200 rounded-full h-3">
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={isInView ? { width: `${sector.percentage}%` } : { width: 0 }}
+                        animate={
+                          isInView
+                            ? { width: `${sector.percentage}%` }
+                            : { width: 0 }
+                        }
                         transition={{ duration: 1.5, delay: 0.8 + index * 0.1 }}
                         className={`h-3 rounded-full ${sector.color}`}
                       ></motion.div>

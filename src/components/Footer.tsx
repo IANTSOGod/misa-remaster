@@ -70,7 +70,7 @@ const Footer = () => {
           <ul className="space-y-3 text-gray-200">
             <li className="flex items-center gap-2">
               <MapPin size={18} />
-              Université d’Excellence, Antananarivo
+              Faculté des sciences,Université d'Antananarivo
             </li>
             <li className="flex items-center gap-2">
               <Phone size={18} />

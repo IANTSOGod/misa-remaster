@@ -1,3 +1,4 @@
+import { navItems } from "@/constants/navitems";
 import { motion } from "framer-motion";
 import { ChevronDown, GraduationCap, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -6,37 +7,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [hoveredDropdown, setHoveredDropdown] = useState("");
-
-  const navItems = [
-    {
-      id: "presentation",
-      label: "Formation",
-      hasDropdown: true,
-      dropdownItems: [
-        { id: "presentation", label: "Présentation" },
-        { id: "parcours", label: "Parcours" },
-        { id: "programmes", label: "Programmes" },
-      ],
-    },
-    {
-      id: "debouches",
-      label: "Carrières",
-      hasDropdown: true,
-      dropdownItems: [
-        { id: "debouches", label: "Débouchés" },
-        { id: "partenaires", label: "Partenaires" },
-      ],
-    },
-    {
-      id: "projets",
-      label: "Vie étudiante",
-      hasDropdown: true,
-      dropdownItems: [
-        { id: "projets", label: "Projets" },
-        { id: "rejoindre", label: "Nous rejoindre" },
-      ],
-    },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,13 +37,19 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Fonction corrigée
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // Ferme le menu mobile avant de scroller
+      setIsOpen(false);
+      setHoveredDropdown("");
+
+      // Petit délai pour laisser l'animation fermer le menu
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 300);
     }
-    setIsOpen(false);
-    setHoveredDropdown("");
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -104,10 +80,14 @@ const Header = () => {
               <GraduationCap className="text-white" size={28} />
             </div>
             <div>
-              <h1 className="font-dancing font-bold text-2xl text-university-red">
+              <h1 className="font-dancing font-bold text-2xl text-university-red hidden md:block">
                 Mention Informatique et Technologie
               </h1>
-              <p className="text-sm text-gray-600 font-montserrat">
+
+              <h1 className="font-dancing font-bold text-2xl text-university-red block md:hidden">
+                MIT
+              </h1>
+              <p className="text-sm text-gray-600 font-montserrat hidden md:block">
                 Faculté des sciences Antananarivo
               </p>
             </div>
