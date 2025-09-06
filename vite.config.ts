@@ -21,6 +21,6 @@ export default defineConfig(({ mode }) => ({
     port: 5173, // port local
     strictPort: true,
     // autoriser toutes les connexions externes
-    allowedHosts: ["192.168.4.159"],
+    allowedHosts: ["ea0dec18ab8c.ngrok-free.app"],
   },
 }));
