@@ -1,3 +1,4 @@
+import AboutMe from "@/components/AboutMe";
 import Careers from "@/components/Careers";
 import Curriculum from "@/components/Curriculum";
 import Footer from "@/components/Footer";
@@ -14,6 +15,7 @@ export default function Index() {
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <AboutMe/>
       <ProgramPresentation />
       <Tracks />
       <Curriculum />

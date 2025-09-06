@@ -142,7 +142,7 @@ const Projects = () => {
                   <CardHeader className="relative">
                     <div className="text-6xl mb-4 text-center">{project.image}</div>
                     <div className="flex justify-between items-start mb-2">
-                      <Badge variant="secondary" className="bg-university-red text-white">
+                      <Badge variant="secondary" className="bg-university-red hover:text-red-800 text-white">
                         {project.category}
                       </Badge>
                       <span className="text-sm text-gray-500 font-montserrat">{project.year}</span>

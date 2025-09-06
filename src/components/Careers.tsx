@@ -106,15 +106,15 @@ const Careers = () => {
                         <CardTitle className="font-montserrat font-bold text-university-red text-lg">
                           {career.title}
                         </CardTitle>
-                        <div className="flex items-center gap-2 text-green-600 font-montserrat font-semibold">
+                        {/* <div className="flex items-center gap-2 text-green-600 font-montserrat font-semibold">
                           <TrendingUp size={16} />
                           {career.growth}
-                        </div>
+                        </div> */}
                       </div>
-                      <div className="flex items-center gap-2 text-gray-600">
+                      {/* <div className="flex items-center gap-2 text-gray-600">
                         <DollarSign size={16} />
                         <span className="font-montserrat font-semibold">{career.salary}</span>
-                      </div>
+                      </div> */}
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="font-montserrat text-gray-600 mb-4">
@@ -187,7 +187,7 @@ const Careers = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 1 }}
@@ -210,7 +210,7 @@ const Careers = () => {
                   <span className="font-montserrat font-bold text-blue-600">25%</span>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>

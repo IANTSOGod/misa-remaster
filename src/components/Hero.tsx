@@ -64,19 +64,19 @@ const Hero = () => {
           >
             <Button
               size="lg"
-              className="bg-university-red hover:bg-university-red-light text-white font-montserrat font-semibold px-8 py-4 text-lg animate-pulse-glow"
+              className="bg-university-red hover:bg-university-red-light hover:text-red-800 hover:bg-white text-white font-montserrat font-semibold px-8 py-4 text-lg animate-pulse-glow"
               onClick={() =>
                 document
-                  .getElementById("presentation")
+                  .getElementById("aboutMe")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              Découvrir la formation
+              Qui sommes-nous ?
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-university-red text-university-red hover:bg-university-red hover:text-white font-montserrat font-semibold px-8 py-4 text-lg"
+              className="border-university-red text-university-red hover:bg-university-red hover:text-white hover:bg-red-800 font-montserrat font-semibold px-8 py-4 text-lg"
               onClick={() =>
                 document
                   .getElementById("parcours")

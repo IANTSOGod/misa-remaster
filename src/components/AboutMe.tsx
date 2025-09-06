@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { Award, BookOpen, GraduationCap, Users } from "lucide-react";
 import { useRef } from "react";
 
-const ProgramPresentation = () => {
+const AboutMe = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -12,13 +12,13 @@ const ProgramPresentation = () => {
       number: "95%",
       label: "Taux d'insertion professionnelle",
     },
-    { icon: Users, number: "100+", label: "Étudiants par promotion" },
-    { icon: Award, number: "20+", label: "Années d'excellence" },
-    // { icon: BookOpen, number: "30+", label: "Modules spécialisés" },
+    { icon: Users, number: "200+", label: "Étudiants par promotion" },
+    { icon: Award, number: "15+", label: "Années d'excellence" },
+    { icon: BookOpen, number: "30+", label: "Modules spécialisés" },
   ];
 
   return (
-    <section id="presentation" className="py-20 bg-white">
+    <section id="aboutMe" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -28,12 +28,10 @@ const ProgramPresentation = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
-            Une formation d'excellence
+            Qui sommes-nous ?
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Notre mention informatique forme les futurs experts du numérique à
-            travers un cursus innovant alliant théorie fondamentale et pratique
-            professionnelle.
+          Fondée en 1996 dans le département de Mathématiques et Informatique des Sciences de l’Université d’Antananarivo, avec le soutien du projet PRESUP (Programme de Renforcement de l’Enseignement Supérieur) et la Coopération Française. 
           </p>
         </motion.div>
 
@@ -44,15 +42,13 @@ const ProgramPresentation = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-3xl font-montserrat font-bold text-university-red mb-6">
-              Notre vision
+            Évolutions vers le LMD
             </h3>
             <div className="space-y-4 text-gray-700 font-montserrat">
               <p className="text-lg leading-relaxed">
-                Former des informaticiens polyvalents capables de s'adapter aux
-                évolutions technologiques et de répondre aux défis du monde
-                numérique.
+              Ayant basculé dans le système LMD depuis 2014, la Maîtrise en Informatique et Statistique Appliquées est devenue Mathématiques Informatique et Statistique Appliquées. La MISA propose une formation orientée recherche pour les étudiants en M2, dont la première promotion est sortie en 2016.
               </p>
-              <p className="text-lg leading-relaxed">
+              {/* <p className="text-lg leading-relaxed">
                 Notre approche pédagogique privilégie l'apprentissage par
                 projet, l'innovation et la collaboration avec le monde
                 professionnel.
@@ -61,7 +57,7 @@ const ProgramPresentation = () => {
                 Nous préparons nos étudiants à devenir les leaders
                 technologiques de demain grâce à un enseignement de qualité et
                 des infrastructures modernes.
-              </p>
+              </p> */}
             </div>
           </motion.div>
 
@@ -72,39 +68,21 @@ const ProgramPresentation = () => {
             className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl"
           >
             <h3 className="text-3xl font-montserrat font-bold text-university-red mb-6">
-              Points forts
-            </h3>
-            <ul className="space-y-4">
-              {[
-                "Enseignement personnalisé en petits groupes",
-                "Laboratoires équipés des dernières technologies",
-                "Partenariats avec les entreprises du secteur",
-                "Projets réels dès la première année",
-                "Accompagnement vers l'emploi",
-                "Formation continue des enseignants",
-              ].map((item, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={
-                    isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
-                  }
-                  transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                  className="flex items-center text-gray-700 font-montserrat"
-                >
-                  <div className="w-2 h-2 bg-university-red rounded-full mr-3"></div>
-                  {item}
-                </motion.li>
-              ))}
-            </ul>
+            Expansion et Innovation           
+             </h3>
+             <div className="space-y-4 text-gray-700 font-montserrat">
+              <p className="text-lg leading-relaxed">
+              À la fin de l’année 2022, la MISA introduit la Mention Informatique et Technologie, offrant une formation complète de la première année (L1) à la troisième année (L3). Cette initiative marque une nouvelle ère pour la MISA, consolidant son statut d’institution pionnière dans le domaine de l’enseignement supérieur en informatique et technologie à Madagascar.
+              </p>
+              </div>
           </motion.div>
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-3 gap-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -131,10 +109,10 @@ const ProgramPresentation = () => {
               </p>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
 };
 
-export default ProgramPresentation;
+export default AboutMe;

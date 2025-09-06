@@ -19,23 +19,22 @@ const Curriculum = () => {
       {
         semester: "Semestre 1",
         modules: [
-          { name: "Mathématiques fondamentales", credits: 6, hours: 60 },
-          { name: "Introduction à l'informatique", credits: 6, hours: 60 },
-          { name: "Algorithmique et programmation", credits: 6, hours: 60 },
-          { name: "Architecture des ordinateurs", credits: 6, hours: 60 },
-          { name: "Anglais technique", credits: 3, hours: 30 },
-          { name: "Communication et méthodologie", credits: 3, hours: 30 },
+          { name: "Mathématiques générales", credits: 6, hours: 60 },
+          { name: "Technique de communication", credits: 6, hours: 60 },
+          { name: "Base de la programmaition", credits: 6, hours: 60 },
+          { name: "Prise en main Unix/Linux", credits: 6, hours: 60 },
+          { name: "Physique", credits: 3, hours: 30 },
         ],
       },
       {
         semester: "Semestre 2",
         modules: [
-          { name: "Mathématiques discrètes", credits: 6, hours: 60 },
-          { name: "Programmation orientée objet", credits: 6, hours: 60 },
-          { name: "Structures de données", credits: 6, hours: 60 },
-          { name: "Systèmes d'exploitation", credits: 6, hours: 60 },
-          { name: "Base de données relationnelles", credits: 3, hours: 30 },
-          { name: "Projet tutoré 1", credits: 3, hours: 30 },
+          { name: "Mathématiques appliqué à l'informatique", credits: 6, hours: 60 },
+          { name: "Combinoatoire et probabilités", credits: 6, hours: 60 },
+          { name: "Communication audio-visuel", credits: 6, hours: 60 },
+          { name: "Langage C", credits: 6, hours: 60 },
+          { name: "Linux et logiciel", credits: 3, hours: 30 },
+          { name: "Éléctromécanique", credits: 3, hours: 30 },
         ],
       },
     ],
@@ -43,23 +42,22 @@ const Curriculum = () => {
       {
         semester: "Semestre 3",
         modules: [
-          { name: "Analyse et conception", credits: 6, hours: 60 },
-          { name: "Programmation web", credits: 6, hours: 60 },
-          { name: "Réseaux informatiques", credits: 6, hours: 60 },
-          { name: "Génie logiciel", credits: 6, hours: 60 },
-          { name: "Statistiques et probabilités", credits: 3, hours: 30 },
-          { name: "Gestion de projet", credits: 3, hours: 30 },
+          { name: "Fabrication numérique", credits: 6, hours: 60 },
+          { name: "Architecture réseau et système", credits: 6, hours: 60 },
+          { name: "Langue et entrepreunariat", credits: 6, hours: 60 },
+          { name: "Probabilités et statistiques", credits: 6, hours: 60 },
+          { name: "Architecture des ordinateurs", credits: 3, hours: 30 },
         ],
       },
       {
         semester: "Semestre 4",
         modules: [
-          { name: "Développement d'applications", credits: 6, hours: 60 },
-          { name: "Sécurité informatique", credits: 6, hours: 60 },
-          { name: "Intelligence artificielle", credits: 6, hours: 60 },
+          { name: "Réseau,système et base de donnée", credits: 6, hours: 60 },
+          { name: "Programmation orienté objet", credits: 6, hours: 60 },
+          { name: "Comptabilité et management", credits: 6, hours: 60 },
           { name: "Bases de données avancées", credits: 6, hours: 60 },
-          { name: "Stage en entreprise", credits: 3, hours: 120 },
-          { name: "Projet tutoré 2", credits: 3, hours: 30 },
+          { name: "Web et multimédia", credits: 3, hours: 120 },
+          { name: "Probabilité et statistques", credits: 3, hours: 30 },
         ],
       },
     ],
@@ -67,16 +65,65 @@ const Curriculum = () => {
       {
         semester: "Semestre 5",
         modules: [
-          { name: "Spécialisation 1", credits: 9, hours: 90 },
-          { name: "Spécialisation 2", credits: 9, hours: 90 },
-          { name: "Méthodes agiles", credits: 3, hours: 30 },
-          { name: "Droit informatique", credits: 3, hours: 30 },
-          { name: "Entrepreneuriat", credits: 3, hours: 30 },
-          { name: "Anglais professionnel", credits: 3, hours: 30 },
+          { name: "Mathématiques", credits: 9, hours: 90 },
+          { name: "Études des probabilités et statistques", credits: 9, hours: 90 },
+          { name: "Développement informatique", credits: 3, hours: 30 },
+          { name: "Synthèse informatique", credits: 3, hours: 30 },
+          { name: "Architecture machine", credits: 3, hours: 30 },
+          { name: "Économie", credits: 3, hours: 30 },
+          { name: "Langues", credits: 3, hours: 30 },
+
         ],
       },
       {
         semester: "Semestre 6",
+        modules: [
+          { name: "Technologie web", credits: 12, hours: 120 },
+          { name: "Économie", credits: 12, hours: 240 },
+          { name: "Langues", credits: 6, hours: 60 },
+          { name: "Mathématiques", credits: 6, hours: 60 },
+          { name: "Développement", credits: 6, hours: 60 },
+          { name: "Synthèse informatique", credits: 6, hours: 60 },
+          { name: "Probabilités", credits: 6, hours: 60 },
+
+        ],
+      },
+    ],
+    M1: [
+      {
+        semester: "Semestre 7",
+        modules: [
+          { name: "Modélisatoin et conception d'objet", credits: 9, hours: 90 },
+          { name: "Modélisation et calcul scientifique", credits: 9, hours: 90 },
+          { name: "Management de projet informatique", credits: 3, hours: 30 },
+          { name: "Web service , XML ", credits: 3, hours: 30 },
+          { name: "Développement colaboratif", credits: 3, hours: 30 },
+        ],
+      },
+      {
+        semester: "Semestre 8",
+        modules: [
+          { name: "Algorithme avancée", credits: 12, hours: 120 },
+          { name: "Introduction à l'apprentissage automatique", credits: 12, hours: 240 },
+          { name: "Optimisatoin combinatoire avancée", credits: 6, hours: 60 },
+          { name: "Base de données réparties", credits: 6, hours: 60 },
+          { name: "Introduction à la vision par ordinateur", credits: 6, hours: 60 },
+          { name: "Entreprenariat  ", credits: 6, hours: 60 },
+        ],
+      },
+    ],
+    M2: [
+      {
+        semester: "Semestre 9",
+        modules: [
+          { name: "Préparation à l'environnement professionnel", credits: 9, hours: 90 },
+          { name: "Développement mobile et embarqué", credits: 9, hours: 90 },
+          { name: "Intégration;vérification,validation,qualification", credits: 3, hours: 30 },
+          { name: "Ingénierie de modèle", credits: 3, hours: 30 },
+        ],
+      },
+      {
+        semester: "Semestre 10",
         modules: [
           { name: "Projet de fin d'études", credits: 12, hours: 120 },
           { name: "Stage long en entreprise", credits: 12, hours: 240 },
@@ -117,7 +164,7 @@ const Curriculum = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <Tabs defaultValue="L1" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8 bg-red-50 p-1 rounded-xl h-16 shadow-inner">
+            <TabsList className="grid w-full grid-cols-5 mb-8 bg-red-50 p-1 rounded-xl h-16 shadow-inner">
               <TabsTrigger
                 value="L1"
                 className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300 
@@ -141,6 +188,22 @@ const Curriculum = () => {
         data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
                 Licence 3
+              </TabsTrigger>
+              <TabsTrigger
+                value="M1"
+                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300 
+        data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
+        data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
+              >
+                Master 1
+              </TabsTrigger>
+              <TabsTrigger
+                value="M2"
+                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300 
+        data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
+        data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
+              >
+                Master 2
               </TabsTrigger>
             </TabsList>
 

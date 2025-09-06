@@ -19,49 +19,46 @@ const JoinUs = () => {
       icon: FileText,
       title: "Dossier de candidature",
       description:
-        "Soumettez votre dossier complet avec relevés de notes et lettre de motivation",
-      deadline: "15 Mars 2024",
+        "Soumettez votre dossier complet avec relevés de notes ",
+      deadline: "",
       status: "required",
     },
     {
       icon: Users,
-      title: "Entretien de motivation",
+      title: "Sélection de dossier",
       description:
-        "Entretien individuel avec l'équipe pédagogique (30 minutes)",
-      deadline: "Avril 2024",
+        "Votre dossier sera examiner et selectionner par les professeurs",
+      deadline: "",
       status: "conditional",
     },
-    {
-      icon: CheckCircle,
-      title: "Tests techniques",
-      description: "Évaluation des compétences en mathématiques et logique",
-      deadline: "Mai 2024",
-      status: "conditional",
-    },
+    // {
+    //   icon: CheckCircle,
+    //   title: "Tests techniques",
+    //   description: "Évaluation des compétences en mathématiques et logique",
+    //   deadline: "Mai 2024",
+    //   status: "conditional",
+    // },
     {
       icon: Calendar,
       title: "Résultats d'admission",
-      description: "Notification des résultats et procédure d'inscription",
-      deadline: "Juin 2024",
+      description: "Notification des résultats et procédure de préinscription et inscription ",
+      deadline: "",
       status: "final",
     },
   ];
 
   const requirements = [
     "Baccalauréat scientifique ou équivalent",
-    "Moyenne générale ≥ 12/20",
+    // "Moyenne générale ≥ 12/20",
     "Bon niveau en mathématiques",
     "Motivation pour l'informatique",
-    "Niveau B2 en anglais recommandé",
   ];
 
   const documents = [
-    "Dossier de candidature complété",
-    "Relevés de notes du baccalauréat",
-    "Relevés de notes post-bac (si applicable)",
-    "Lettre de motivation personnalisée",
-    "CV détaillé",
-    "Lettres de recommandation (optionnel)",
+    "Demande de préinscription remplie et signée par le candidat",
+    "Une copie certifiée conforme au relevé des notes du Bacclauréat",
+    "Une acte de naissance moins de trois mois ou CIN",
+    "Reçue de versement pour sélection",
   ];
 
   return (
@@ -105,7 +102,7 @@ const JoinUs = () => {
           <h3 className="text-4xl font-dancing font-bold text-university-red text-center mb-12">
             Processus d'admission
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {admissionSteps.map((step, index) => (
               <motion.div
                 key={index}
@@ -138,10 +135,10 @@ const JoinUs = () => {
                     <CardDescription className="font-montserrat text-gray-600 leading-relaxed">
                       {step.description}
                     </CardDescription>
-                    <div className="flex items-center justify-center gap-2 text-sm font-montserrat font-semibold text-university-red">
+                    {/* <div className="flex items-center justify-center gap-2 text-sm font-montserrat font-semibold text-university-red">
                       <Clock size={16} />
                       {step.deadline}
-                    </div>
+                    </div> */}
                   </CardContent>
                 </Card>
               </motion.div>
@@ -248,7 +245,7 @@ const JoinUs = () => {
                 </Button>
               </motion.div>
               <p className="text-sm opacity-75 font-montserrat">
-                Candidatures ouvertes jusqu'au 15 mars 2024
+                La date de candidature sera annoncé prochainement
               </p>
             </div>
           </div>
