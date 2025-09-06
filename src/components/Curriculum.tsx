@@ -32,10 +32,10 @@ const Curriculum = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
-            Programmes par semestre
+            Programmes par semestre de licence
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Un cursus progressif sur 5 années pour acquérir toutes les
+            Un cursus progressif sur 3 années pour acquérir toutes les
             compétences nécessaires à votre réussite professionnelle.
           </p>
         </motion.div>
@@ -46,46 +46,30 @@ const Curriculum = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <Tabs defaultValue="L1" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-8 bg-red-50 p-1 rounded-xl h-16 shadow-inner">
+            <TabsList className="grid w-full grid-cols-3 mb-8 bg-red-50 p-1 rounded-xl h-16 shadow-inner">
               <TabsTrigger
                 value="L1"
-                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300 
-        data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
-        data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
+                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300
+    data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
+    data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
                 L1
               </TabsTrigger>
               <TabsTrigger
                 value="L2"
-                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300 
-        data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
-        data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
+                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300
+    data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
+    data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
                 L2
               </TabsTrigger>
               <TabsTrigger
                 value="L3"
-                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300 
-        data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
-        data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
+                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300
+    data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
+    data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
                 L3
-              </TabsTrigger>
-              <TabsTrigger
-                value="M1"
-                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300 
-        data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
-        data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
-              >
-                M1
-              </TabsTrigger>
-              <TabsTrigger
-                value="M2"
-                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300 
-        data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
-        data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
-              >
-                M2
               </TabsTrigger>
             </TabsList>
 

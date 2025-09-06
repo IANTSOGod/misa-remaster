@@ -6,7 +6,7 @@ import JoinUs from "@/components/JoinUs";
 import Partners from "@/components/Partners";
 import ProgramPresentation from "@/components/ProgramPresentation";
 import Projects from "@/components/Projects";
-import Tracks from "@/components/Tracks";
+import UniversityRoadmap from "@/components/UniversityRoadmap";
 
 export default function Index() {
   return (
@@ -14,8 +14,9 @@ export default function Index() {
       <Hero />
       <AboutMe />
       <ProgramPresentation />
-      <Tracks />
+      {/* <Tracks /> */}
       <Curriculum />
+      <UniversityRoadmap></UniversityRoadmap>
       <Careers />
       <Partners />
       <Projects />
