@@ -89,7 +89,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="absolute mt-20 left-1/2 transform -translate-x-1/2 rounded-full bg-university-red w-[50px] h-[50px] flex items-center justify-center"
+          className="absolute left-1/2 mt-20 transform -translate-x-1/2 rounded-full bg-university-red w-[50px] h-[50px] flex items-center justify-center"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >

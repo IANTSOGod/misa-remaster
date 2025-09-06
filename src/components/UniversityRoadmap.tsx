@@ -175,7 +175,7 @@ export default function UniversityRoadmap() {
         <div className="bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:scale-[1.03] hover:-rotate-1 overflow-hidden group">
           {/* Header with gradient */}
           <div
-            className={`${spec.color} p-6 sm:p-8 text-white relative overflow-hidden min-h-[220px] sm:min-h-[280px]`}
+            className={`${spec.color} p-6 sm:p-8 text-white relative overflow-hidden h-[300px]`}
           >
             {/* Animated background elements */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-700" />
@@ -203,7 +203,7 @@ export default function UniversityRoadmap() {
           </div>
 
           {/* Content */}
-          <div className="p-8 h-[750px] flex flex-col items-center align-center justify-center">
+          <div className="p-8 h-fit flex flex-col items-center align-center justify-center">
             {/* M1 */}
             <div className="mb-8">
               <h4 className="text-2xl font-montserrat font-bold text-gray-800 mb-4 flex items-center">
@@ -254,7 +254,7 @@ export default function UniversityRoadmap() {
       {/* Header */}
       <div className="pt-16 pb-12 text-center">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-6xl md:text-8xl font-montserrat font-black bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 bg-clip-text text-transparent mb-6 tracking-tight">
+          <h1 className=" text-2xl md:text-8xl font-montserrat font-black bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 bg-clip-text text-transparent mb-6 tracking-tight">
             Spécialisations Master
           </h1>
           <p className="text-2xl text-gray-600 leading-relaxed font-montserrat font-medium max-w-3xl mx-auto">
@@ -264,7 +264,7 @@ export default function UniversityRoadmap() {
       </div>
 
       {/* Main content */}
-      <div className="max-w-7xl mx-auto px-4 pb-16">
+      <div className="max-w-7xl mx-auto px-4 pb-16 h-fit">
         {/* Hero "Quoi de neuf" section */}
         <HeroSection />
 
