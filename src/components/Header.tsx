@@ -77,7 +77,7 @@ const Header = () => {
             whileHover={{ scale: 1.02 }}
           >
             <div className="p-3 bg-gradient-to-r from-university-red to-university-red-light rounded-xl shadow-lg">
-              <img src="public/logo.png" className="w-10 h-10"></img>
+              <img src="/logo.png" className="w-10 h-10"></img>
             </div>
             <div>
               <h1 className="font-dancing font-bold text-2xl text-university-red hidden md:block">

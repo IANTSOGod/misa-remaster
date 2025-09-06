@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <div className="p-3 bg-white rounded-lg shadow-lg">
-              <img src="public/logo.png" className="w-10 h-10"></img>
+              <img src="/logo.png" className="w-10 h-10"></img>
             </div>
             <h2 className="font-dancing font-bold text-2xl">
               Mention Informatique
