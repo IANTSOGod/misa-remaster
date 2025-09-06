@@ -3,9 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-university-red text-white mt-20">
-      {/* Contenu principal */}
       <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        {/* Logo & présentation */}
         <div>
           <div className="flex items-center gap-3 mb-4">
             <div className="p-3 bg-white rounded-lg shadow-lg">
@@ -21,7 +19,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Liens utiles */}
         <div>
           <h3 className="font-montserrat font-semibold text-lg mb-4 border-b border-red-200 inline-block">
             Liens utiles
@@ -62,7 +59,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h3 className="font-montserrat font-semibold text-lg mb-4 border-b border-red-200 inline-block">
             Contact
