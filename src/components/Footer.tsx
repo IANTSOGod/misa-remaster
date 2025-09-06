@@ -1,4 +1,4 @@
-import { GraduationCap, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,8 +8,8 @@ const Footer = () => {
         {/* Logo & présentation */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 bg-university-red-light rounded-lg shadow-lg">
-              <GraduationCap size={28} className="text-white" />
+            <div className="p-3 bg-white rounded-lg shadow-lg">
+              <img src="public/logo.png" className="w-10 h-10"></img>
             </div>
             <h2 className="font-dancing font-bold text-2xl">
               Mention Informatique
@@ -74,17 +74,16 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-2">
               <Phone size={18} />
-              +261 XX XX XXX XX
+              (+261) 34 53 140 38
             </li>
             <li className="flex items-center gap-2">
               <Mail size={18} />
-              contact@university.mg
+              administration@mit-ua.mg
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Bandeau bas */}
       <div className="bg-university-red-light py-4">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-100">
           <p className="mb-2 md:mb-0">

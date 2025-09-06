@@ -1,109 +1,13 @@
+import { partners } from "@/constants/parteners";
+import { partnerships } from "@/constants/partenership";
 import { motion, useInView } from "framer-motion";
-import {
-  Award,
-  Building2,
-  ChevronLeft,
-  ChevronRight,
-  Handshake,
-  Users,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const Partners = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const partnerships = [
-    {
-      icon: Handshake,
-      title: "Stages & Alternance",
-      description:
-        "Plus de 200 offres de stages et contrats d'alternance par an",
-      number: "200+",
-    },
-    {
-      icon: Users,
-      title: "Interventions Professionnelles",
-      description: "Experts du secteur intervenant dans nos cours",
-      number: "50+",
-    },
-    {
-      icon: Building2,
-      title: "Entreprises Partenaires",
-      description: "Réseau d'entreprises pour l'insertion professionnelle",
-      number: "150+",
-    },
-    {
-      icon: Award,
-      title: "Projets Collaboratifs",
-      description: "Projets réels menés avec nos partenaires industriels",
-      number: "30+",
-    },
-  ];
-
-  const partners = [
-    {
-      name: "Microsoft",
-      logo: "🏢",
-      description:
-        "Partenaire technologique majeur pour nos formations cloud et IA",
-      category: "Tech Giant",
-      color: "from-blue-500 to-blue-700",
-    },
-    {
-      name: "Google",
-      logo: "🔍",
-      description:
-        "Collaboration sur les technologies web et l'intelligence artificielle",
-      category: "Innovation",
-      color: "from-red-500 to-yellow-500",
-    },
-    {
-      name: "Amazon AWS",
-      logo: "☁️",
-      description: "Formation aux services cloud et architectures distribuées",
-      category: "Cloud",
-      color: "from-orange-500 to-yellow-600",
-    },
-    {
-      name: "Capgemini",
-      logo: "💼",
-      description: "ESN leader offrant stages et opportunités de carrière",
-      category: "Consulting",
-      color: "from-blue-600 to-purple-600",
-    },
-    {
-      name: "Criteo",
-      logo: "📊",
-      description:
-        "Startup française spécialisée dans la publicité programmatique",
-      category: "AdTech",
-      color: "from-green-500 to-teal-600",
-    },
-    {
-      name: "BlaBlaCar",
-      logo: "🚗",
-      description: "Scale-up européenne pionnière de l'économie collaborative",
-      category: "Mobility",
-      color: "from-blue-400 to-green-500",
-    },
-    {
-      name: "Doctolib",
-      logo: "🏥",
-      description: "Leader européen des solutions numériques pour la santé",
-      category: "HealthTech",
-      color: "from-teal-500 to-blue-600",
-    },
-    {
-      name: "INRIA",
-      logo: "🔬",
-      description:
-        "Institut national de recherche en informatique et automatique",
-      category: "Research",
-      color: "from-purple-500 to-pink-600",
-    },
-  ];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % partners.length);
@@ -193,7 +97,7 @@ const Partners = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <h3 className="text-3xl font-montserrat font-bold text-center text-university-red mb-12">
+          <h3 className="text-4xl font-dancing font-bold text-center text-university-red mb-12">
             Entreprises Partenaires
           </h3>
 
