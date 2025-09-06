@@ -175,7 +175,7 @@ export default function UniversityRoadmap() {
         <div className="bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:scale-[1.03] hover:-rotate-1 overflow-hidden group">
           {/* Header with gradient */}
           <div
-            className={`${spec.color} p-6 sm:p-8 text-white relative overflow-hidden h-[300px]`}
+            className={`${spec.color} p-6 sm:p-8 text-white relative overflow-hidden h-fit`}
           >
             {/* Animated background elements */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-700" />
