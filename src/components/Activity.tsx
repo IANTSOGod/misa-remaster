@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import PhotoCarousel from "./PhotoCarousel";
+import { achievement, photos } from "@/constants/presentation_carousel";
 
 export default function Activity({
   activities,
@@ -64,6 +66,9 @@ export default function Activity({
             </div>
           </motion.div>
         ))}
+      </div>
+      <div className="mt-20">
+      <PhotoCarousel photos={achievement}/>
       </div>
     </motion.div>
   );

@@ -1,6 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { Award, BookOpen, GraduationCap, Users } from "lucide-react";
 import { useRef } from "react";
+import PhotoCarousel from "./PhotoCarousel";
+import {photos} from "@/constants/presentation_carousel";
+
 
 const AboutMe = () => {
   const ref = useRef(null);
@@ -111,6 +114,7 @@ const AboutMe = () => {
           ))}
         </motion.div> */}
       </div>
+<PhotoCarousel photos={photos}/>
     </section>
   );
 };

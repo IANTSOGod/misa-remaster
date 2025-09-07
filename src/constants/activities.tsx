@@ -1,4 +1,4 @@
-import { Code, Rocket, Trophy, Users } from "lucide-react";
+import { Code, Trees, Trophy, Users } from "lucide-react";
 
 export const activities = [
   {
@@ -20,9 +20,9 @@ export const activities = [
     highlights: ["Club IA & Robotique", "Association Cybersécurité"],
   },
   {
-    icon: Rocket,
-    title: "Incubateur étudiant",
-    description: "Accompagnement à la création d'entreprise",
-    highlights: ["5 startups créées", "2M€ levés par nos alumni"],
+    icon: Trees,
+    title: "Reboisement",
+    description: "Chaque année, nous faisons du reboisement.",
+    highlights: ["Responsabilité envers la société", "Protection de l'environnement"],
   },
 ];

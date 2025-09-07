@@ -17,7 +17,7 @@ const Curriculum = () => {
 
   return (
     <section
-      id="programmes"
+      id="parcours"
       className="py-20 bg-white relative overflow-hidden"
     >
       {/* Tech background */}

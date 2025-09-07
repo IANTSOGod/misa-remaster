@@ -10,8 +10,8 @@ import UniversityRoadmap from "@/components/UniversityRoadmap";
 
 export default function Index() {
   return (
-    <div className="min-h-screen">
-      <Hero />
+<div className="min-h-screen w-full flex flex-col overflow-x-hidden">
+<Hero />
       <AboutMe />
       <ProgramPresentation />
       {/* <Tracks /> */}
