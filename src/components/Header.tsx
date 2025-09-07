@@ -73,17 +73,15 @@ const Header = () => {
       <div className="container mx-auto md:px-6 px-2">
         <div className="flex items-center justify-between h-20">
           <motion.div className="flex items-center gap-4" whileHover={{ scale: 1.02 }}>
-            <div className="p-3 bg-gradient-to-r from-university-red to-university-red-light rounded-xl shadow-lg">
+            <div className="p-3 bg-gradient-to-r from-university-red to-university-red-light">
               <img src="/logo.png" className="w-10 h-10"></img>
             </div>
             <div>
-              <h1 className="font-dancing font-bold text-2xl text-university-red hidden md:block">
+              <h1 className="font-sans font-bold text-2xl text-university-red hidden md:block">
                 Mention Informatique et Technologie
               </h1>
 
-              <h1 className="font-dancing font-bold text-2xl text-university-red block md:hidden">
-                MIT
-              </h1>
+              <h1 className=" font-bold text-2xl text-university-red block md:hidden">MIT</h1>
               <p className="text-sm text-gray-600 font-montserrat hidden md:block">
                 Faculté des sciences Antananarivo
               </p>
@@ -99,7 +97,7 @@ const Header = () => {
                 onClick={() => setHoveredDropdown(item.id)} // ouvre au hover
               >
                 <motion.button
-                  className={`flex items-center gap-2 md:px-6 px-2 py-3 rounded-xl font-montserrat font-semibold transition-all duration-300 ${
+                  className={`flex items-center gap-2 md:px-6 px-2 py-3 font-montserrat font-semibold transition-all duration-300 ${
                     isItemActive(item)
                       ? 'bg-university-red text-white shadow-lg'
                       : 'text-gray-700 hover:bg-red-50 hover:text-university-red'
@@ -129,7 +127,7 @@ const Header = () => {
                       scale: hoveredDropdown === item.id ? 1 : 0.95,
                     }}
                     transition={{ duration: 0.2 }}
-                    className={`absolute top-full left-0 mt-2 bg-white rounded-xl shadow-xl border border-red-100 overflow-hidden min-w-48 ${
+                    className={`absolute top-full left-0 mt-2 bg-white shadow-xl border border-red-100 overflow-hidden min-w-48 ${
                       hoveredDropdown === item.id ? 'pointer-events-auto' : 'pointer-events-none'
                     }`}
                     onMouseLeave={() => setHoveredDropdown('')}
@@ -162,7 +160,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-3 text-university-red bg-red-50 rounded-xl hover:bg-red-100 transition-colors"
+            className="lg:hidden p-3 text-university-red transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -185,7 +183,7 @@ const Header = () => {
                   <button
                     key={dropItem.id}
                     onClick={() => scrollToSection(dropItem.id)}
-                    className={`block w-full text-left px-8 py-3 font-montserrat font-medium transition-all duration-200 rounded-lg mx-4 ${
+                    className={`block w-full text-left px-8 py-3 font-montserrat font-medium transition-all duration-200 mx-4 ${
                       activeSection === dropItem.id
                         ? 'bg-university-red text-white'
                         : 'text-gray-700 hover:bg-red-50 hover:text-university-red'

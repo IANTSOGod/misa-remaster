@@ -74,9 +74,7 @@ const JoinUs = () => {
           transition={{ duration: 0.8 }}
           className="text-center my-32"
         >
-          <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
-            Comment nous rejoindre ?
-          </h2>
+          <h2 className="text-5xl  font-bold text-university-red mb-6">Comment nous rejoindre ?</h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
             Intégrez notre formation d'excellence et donnez vie à vos ambitions dans le domaine de
             l'informatique. Découvrez notre processus d'admission transparent et nos critères de
@@ -91,7 +89,7 @@ const JoinUs = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="my-32"
         >
-          <h3 className="text-4xl font-dancing font-bold text-university-red text-center mb-12">
+          <h3 className="text-4xl  font-bold text-university-red text-center mb-12">
             Processus d'admission
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -103,7 +101,7 @@ const JoinUs = () => {
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
               >
-                <Card className="h-full bg-gradient-to-br from-white to-red-50 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-university-red">
+                <Card className="h-full bg-gradient-to-br from-white to-red-50 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-university-red rounded-none">
                   <CardHeader className="text-center">
                     <motion.div
                       className="inline-block p-4 bg-university-red rounded-full mb-4 mx-auto"
@@ -143,7 +141,7 @@ const JoinUs = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Card className="h-full bg-white shadow-lg">
+            <Card className="h-full bg-white shadow-lg rounded-none border-l-4 border-university-red">
               <CardHeader className="bg-gradient-to-r from-university-red to-university-red-light text-university-red">
                 <CardTitle className="font-montserrat font-bold text-2xl flex items-center gap-3">
                   <CheckCircle size={28} />
@@ -174,7 +172,7 @@ const JoinUs = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Card className="h-full bg-white shadow-lg">
+            <Card className="h-full bg-white shadow-lg rounded-none border-l-4 border-university-red">
               <CardHeader className="bg-gradient-to-r from-university-red to-university-red-light text-university-red">
                 <CardTitle className="font-montserrat font-bold text-2xl flex items-center gap-3">
                   <FileText size={28} />
@@ -206,11 +204,11 @@ const JoinUs = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="bg-gradient-to-r from-university-red to-university-red-light text-black p-8 rounded-2xl"
+          className="bg-gradient-to-r from-university-red to-university-red-light text-black p-8"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-3xl font-dancing font-bold mb-4">Prêt à candidater ?</h3>
+              <h3 className="text-3xl  font-bold mb-4">Prêt à candidater ?</h3>
               <p className="text-xl font-montserrat mb-6 opacity-90">
                 Rejoignez notre communauté d'étudiants passionnés et lancez votre carrière dans
                 l'informatique !

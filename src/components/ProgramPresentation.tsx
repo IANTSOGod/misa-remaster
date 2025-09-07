@@ -28,7 +28,7 @@ const ProgramPresentation = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-32"
           >
-            <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
+            <h2 className="text-5xl  font-bold text-university-red mb-6">
               Une formation d'excellence
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
@@ -66,7 +66,7 @@ const ProgramPresentation = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl"
+              className="bg-gradient-to-br from-red-50 to-red-100 p-8 border-l-4 border-university-red"
             >
               <h3 className="text-3xl font-montserrat font-bold text-university-red mb-6">
                 Points forts
@@ -108,7 +108,7 @@ const ProgramPresentation = () => {
               initial={{ scale: 0.5, opacity: 0 }}
               animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-              className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-university-red"
             >
               <motion.div
                 className="inline-block p-4 bg-university-red rounded-full mb-4"

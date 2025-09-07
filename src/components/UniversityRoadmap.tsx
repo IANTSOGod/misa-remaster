@@ -102,7 +102,7 @@ export default function UniversityRoadmap() {
           <div className="absolute -top-6 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-500" />
 
           {/* Main hero content */}
-          <div className="relative bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 text-white px-12 py-16 rounded-3xl shadow-2xl transform hover:scale-[1.02] transition-all duration-500 overflow-hidden">
+          <div className="relative bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 text-white px-12 py-16 shadow-2xl transform hover:scale-[1.02] transition-all duration-500 overflow-hidden">
             {/* Background decorations */}
             <div className="absolute top-0 left-0 w-full h-full opacity-10">
               <div className="absolute top-8 left-8 w-32 h-32 bg-white rounded-full" />
@@ -113,7 +113,7 @@ export default function UniversityRoadmap() {
             <div className="relative z-10">
               <div className="flex items-center justify-center space-x-4 mb-6">
                 <Sparkles className="w-12 h-12 animate-pulse" />
-                <h2 className="text-3xl sm:text-5xl md:text-6xl font-dancing font-bold tracking-wide">
+                <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold tracking-wide">
                   Quoi de Neuf ?
                 </h2>
                 <Star className="w-12 h-12 animate-pulse" />
@@ -167,9 +167,9 @@ export default function UniversityRoadmap() {
             : 'opacity-0 translate-y-16 scale-90 rotate-3'
         }`}
       >
-        <div className="bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-700 transform lg:hover:scale-[1.03] lg:hover:-rotate-1 overflow-hidden group">
+        <div className="bg-white shadow-2xl hover:shadow-3xl transition-all duration-700 transform lg:hover:scale-[1.03] lg:hover:-rotate-1 overflow-hidden group">
           {/* Header with gradient */}
-          <div className={`${spec.color} p-6 sm:p-8 text-white relative overflow-hidden h-fit`}>
+          <div className={`${spec.color} p-3 text-white relative overflow-hidden h-fit`}>
             {/* Animated background elements */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-700" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-white opacity-5 rounded-full -ml-16 -mb-16 group-hover:scale-110 transition-transform duration-700" />
@@ -196,20 +196,20 @@ export default function UniversityRoadmap() {
           </div>
 
           {/* Content */}
-          <div className="p-8 h-fit flex flex-col items-center align-center justify-center">
+          <div className="p-3 h-fit flex flex-col items-center align-center justify-center">
             {/* M1 */}
             <div className="mb-8">
               <h4 className="text-2xl font-montserrat font-bold text-gray-800 mb-4 flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-rose-500 text-white rounded-2xl flex items-center justify-center text-lg font-black mr-4 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-rose-500 text-white flex items-center justify-center text-lg font-black mr-4 shadow-lg">
                   M1
                 </div>
                 Master 1
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 border-l-4 border-university-red pl-1">
                 {spec.m1Content.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
-                    className="bg-gradient-to-r from-red-50 to-rose-50 text-red-800 rounded-xl px-4 py-3 font-montserrat font-medium transition-all duration-300 hover:from-red-100 hover:to-rose-100 hover:scale-105 border border-red-100 hover:border-red-200 shadow-sm hover:shadow-md"
+                    className="bg-gradient-to-r from-red-50 to-rose-50 text-red-800 px-4 py-3 font-montserrat font-medium transition-all duration-300 hover:from-red-100 hover:to-rose-100 hover:scale-105 border border-red-100 hover:border-red-200 shadow-sm hover:shadow-md"
                   >
                     • {item}
                   </div>
@@ -220,16 +220,16 @@ export default function UniversityRoadmap() {
             {/* M2 */}
             <div>
               <h4 className="text-2xl font-montserrat font-bold text-gray-800 mb-4 flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-2xl flex items-center justify-center text-lg font-black mr-4 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-500 text-white flex items-center justify-center text-lg font-black mr-4 shadow-lg">
                   M2
                 </div>
                 Master 2
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 border-l-4 border-university-red pl-1">
                 {spec.m2Content.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
-                    className="bg-gradient-to-r from-rose-50 to-pink-50 text-rose-800 rounded-xl px-4 py-3 font-montserrat font-medium transition-all duration-300 hover:from-rose-100 hover:to-pink-100 hover:scale-105 border border-rose-100 hover:border-rose-200 shadow-sm hover:shadow-md"
+                    className="bg-gradient-to-r from-rose-50 to-pink-50 text-rose-800 px-4 py-3 font-montserrat font-medium transition-all duration-300 hover:from-rose-100 hover:to-pink-100 hover:scale-105 border border-rose-100 hover:border-rose-200 shadow-sm hover:shadow-md"
                   >
                     • {item}
                   </div>
@@ -246,7 +246,7 @@ export default function UniversityRoadmap() {
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 font-montserrat">
       {/* Header */}
       <div className="pt-16 pb-12 text-center my-20">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-2">
           <h1 className=" text-2xl md:text-8xl font-montserrat font-black bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 bg-clip-text text-transparent mb-6 tracking-tight">
             Spécialisations Master
           </h1>
@@ -257,7 +257,7 @@ export default function UniversityRoadmap() {
       </div>
 
       {/* Main content */}
-      <div className="max-w-7xl mx-auto px-4 pb-16 h-fit">
+      <div className="max-w-7xl mx-auto px-2 pb-16 h-fit">
         {/* Hero "Quoi de neuf" section */}
         <HeroSection />
 

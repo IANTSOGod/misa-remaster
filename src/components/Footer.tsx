@@ -6,10 +6,10 @@ const Footer = () => {
       <div className="container mx-auto md:px-6 px-2 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 bg-white rounded-lg shadow-lg">
+            <div className="p-3 bg-white shadow-lg">
               <img src="/logo.png" className="w-10 h-10"></img>
             </div>
-            <h2 className="font-dancing font-bold text-2xl">Mention Informatique</h2>
+            <h2 className=" font-bold text-2xl">Mention Informatique</h2>
           </div>
           <p className="text-gray-200 font-montserrat text-sm leading-relaxed">
             Une formation d’excellence pour façonner les ingénieurs de demain, alliant rigueur

@@ -22,7 +22,7 @@ const Curriculum = () => {
           transition={{ duration: 0.8 }}
           className="text-center my-32"
         >
-          <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
+          <h2 className="text-5xl  font-bold text-university-red mb-6">
             Pour la licence, nous avons :
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
@@ -38,27 +38,27 @@ const Curriculum = () => {
           className="my-24"
         >
           <Tabs defaultValue="L1" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8 bg-red-50 p-1 px-2 gap-1 rounded-xl h-16 shadow-inner">
+            <TabsList className="grid w-full grid-cols-3 mb-8 bg-red-50 p-1 h-max gap-0.5 rounded-none shadow-inner">
               <TabsTrigger
                 value="L1"
-                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300
-    data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
+                className="font-montserrat font-bold text-lg h-12 rounded-none transition-all duration-300
+    data-[state=active]:bg-red-300 data-[state=active]:text-red-800
     data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
                 L1
               </TabsTrigger>
               <TabsTrigger
                 value="L2"
-                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300
-    data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
+                className="font-montserrat font-bold text-lg h-12 rounded-none transition-all duration-300
+    data-[state=active]:bg-red-300 data-[state=active]:text-red-800
     data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
                 L2
               </TabsTrigger>
               <TabsTrigger
                 value="L3"
-                className="font-montserrat font-bold text-lg h-12 rounded-lg transition-all duration-300
-    data-[state=active]:bg-red-200 data-[state=active]:text-red-800 data-[state=active]:shadow-lg
+                className="font-montserrat font-bold text-lg h-12 rounded-none transition-all duration-300
+    data-[state=active]:bg-red-300 data-[state=active]:text-red-800
     data-[state=inactive]:bg-red-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:bg-red-100 data-[state=inactive]:hover:text-red-800"
               >
                 L3
@@ -85,7 +85,7 @@ const Curriculum = () => {
                       }
                       transition={{ duration: 0.6, delay: semesterIndex * 0.2 }}
                     >
-                      <Card className="h-full shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <Card className="h-full shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-none border-l-4 border-university-red">
                         <CardHeader className="bg-gradient-to-r from-university-red to-university-red-light text-white">
                           <CardTitle className="font-montserrat font-bold text-xl text-university-red">
                             {semester.semester}
@@ -106,7 +106,7 @@ const Curriculum = () => {
                                   duration: 0.4,
                                   delay: semesterIndex * 0.2 + moduleIndex * 0.1,
                                 }}
-                                className="flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-red-50 transition-colors duration-200"
+                                className="flex justify-between items-center p-3 bg-gray-50 hover:bg-red-50 transition-colors duration-200"
                               >
                                 <div className="flex-1">
                                   <h4 className="font-montserrat font-semibold text-gray-800">
@@ -164,7 +164,7 @@ const Curriculum = () => {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-              className="text-center p-6 bg-gradient-to-br from-red-50 to-red-100 rounded-xl"
+              className="text-center p-6 bg-gradient-to-br from-red-50 to-red-100 border-l-4 border-university-red"
             >
               <motion.div
                 className="inline-block p-4 bg-university-red rounded-full mb-4"

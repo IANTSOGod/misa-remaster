@@ -21,9 +21,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center my-32"
         >
-          <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
-            Projets & Activités
-          </h2>
+          <h2 className="text-5xl  font-bold text-university-red mb-6">Projets & Activités</h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
             Découvrez les réalisations exceptionnelles de nos étudiants et la richesse de la vie
             étudiante au sein de notre formation.
@@ -36,7 +34,7 @@ const Projects = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="my-32"
         >
-          <h3 className="text-4xl font-dancing font-bold text-university-red text-center mb-12">
+          <h3 className="text-4xl  font-bold text-university-red text-center mb-12">
             Projets étudiants remarquables
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -45,11 +43,11 @@ const Projects = () => {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="h-full"
               >
-                <Card className="h-full bg-white shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                <Card className="h-full bg-white shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden rounded-none border-l-4 border-university-red">
                   <CardHeader className="relative">
                     <div className="text-6xl mb-4 text-center">{project.image}</div>
                     <div className="flex justify-between items-start mb-2">

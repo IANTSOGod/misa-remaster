@@ -107,22 +107,21 @@ html {
 }
 
 .tech-grid {
-  background-image: 
-    linear-gradient(rgba(153, 27, 27, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(rgba(153, 27, 27, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(153, 27, 27, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
 .tech-circuit {
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(153, 27, 27, 0.1) 2px, transparent 2px),
+  background-image: radial-gradient(circle at 25% 25%, rgba(153, 27, 27, 0.1) 2px, transparent 2px),
     radial-gradient(circle at 75% 75%, rgba(153, 27, 27, 0.1) 2px, transparent 2px);
   background-size: 60px 60px;
 }
 
 /* Custom animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -135,7 +134,8 @@ html {
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
   }
   50% {
@@ -184,7 +184,7 @@ html {
   font-weight: 600 !important;
 }
 
-.tabs-trigger-custom[data-state="active"] {
+.tabs-trigger-custom[data-state='active'] {
   background-color: #991b1b !important;
   color: white !important;
   border-color: #991b1b !important;

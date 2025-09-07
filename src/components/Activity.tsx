@@ -18,7 +18,7 @@ export default function Activity({
       transition={{ duration: 0.8, delay: 0.8 }}
       className="my-44"
     >
-      <h3 className="text-4xl font-dancing font-bold text-university-red text-center mb-12">
+      <h3 className="text-4xl  font-bold text-university-red text-center mb-12">
         Vie étudiante & Activités
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -29,7 +29,7 @@ export default function Activity({
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
             whileHover={{ y: -10, scale: 1.05 }}
-            className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+            className="text-center p-6 bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-university-red"
           >
             <motion.div
               className="inline-block p-4 bg-university-red rounded-full mb-4"

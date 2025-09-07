@@ -38,7 +38,7 @@ const Hero = () => {
           className="max-w-6xl mx-auto"
         >
           <motion.h1
-            className="text-6xl md:text-8xl font-dancing font-bold gradient-text mb-8"
+            className="text-6xl md:text-8xl  font-bold gradient-text mb-8"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -63,7 +63,7 @@ const Hero = () => {
           >
             <Button
               size="lg"
-              className="bg-university-red hover:bg-university-red-light hover:text-red-800 hover:bg-white text-white font-montserrat font-semibold px-8 py-4 text-lg animate-pulse-glow"
+              className="bg-university-red hover:bg-university-red-light hover:bg-red-700 hover:text-gray-100 text-white font-montserrat font-semibold px-8 py-4 text-lg animate-pulse-glow rounded-none"
               onClick={() =>
                 document.getElementById('aboutMe')?.scrollIntoView({ behavior: 'smooth' })
               }
@@ -73,7 +73,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-university-red text-university-red hover:bg-university-red hover:text-white hover:bg-red-800 font-montserrat font-semibold px-8 py-4 text-lg"
+              className="border-university-red text-university-red hover:bg-gray-100 hover:text-red-500 font-montserrat font-semibold px-8 py-4 text-lg rounded-none"
               onClick={() =>
                 document.getElementById('parcours')?.scrollIntoView({ behavior: 'smooth' })
               }

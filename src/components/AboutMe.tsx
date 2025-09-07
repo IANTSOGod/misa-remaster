@@ -1,3 +1,4 @@
+import heroimg from '@/assets/Sortie-De-Prom.jpg';
 import { photos } from '@/constants/presentation_carousel';
 import { motion, useInView } from 'framer-motion';
 import { Award, BookOpen, GraduationCap, Users } from 'lucide-react';
@@ -27,16 +28,19 @@ const AboutMe = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center min-h-screen flex flex-col justify-center"
+          className="text-center min-h-screen flex flex-col justify-center relative"
         >
-          <h2 className="text-5xl font-dancing font-bold text-university-red lg:mb-32 mb-14">
-            Qui sommes-nous ?
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Fondée en 1996 dans le département de Mathématiques et Informatique des Sciences de
-            l’Université d’Antananarivo, avec le soutien du projet PRESUP (Programme de Renforcement
-            de l’Enseignement Supérieur) et la Coopération Française.
-          </p>
+          <div className="absolute inset-0 overflow-hidden filter contrast-125 brightness-75">
+            <img src={heroimg} alt="Sortie de promotion" className="object-cover w-full h-full" />
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-5xl font-bold text-red-300 lg:mb-32 mb-14">Qui sommes-nous ?</h2>
+            <p className="text-xl text-white max-w-3xl mx-auto font-montserrat leading-relaxed">
+              Fondée en 1996 dans le département de Mathématiques et Informatique des Sciences de
+              l’Université d’Antananarivo, avec le soutien du projet PRESUP (Programme de
+              Renforcement de l’Enseignement Supérieur) et la Coopération Française.
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -73,7 +77,7 @@ const AboutMe = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl"
+            className="bg-gradient-to-br from-red-50 to-red-100 p-8 border-l-4 border-university-red"
           >
             <h3 className="text-3xl font-montserrat font-bold text-university-red mb-6">
               Expansion et Innovation
@@ -122,8 +126,8 @@ const AboutMe = () => {
             </motion.div>
           ))}
         </motion.div> */}
+        <PhotoCarousel photos={photos} />
       </div>
-      <PhotoCarousel photos={photos} />
     </section>
   );
 };

@@ -73,9 +73,7 @@ const Careers = () => {
           transition={{ duration: 0.8 }}
           className="text-center my-44"
         >
-          <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
-            Débouchés professionnels
-          </h2>
+          <h2 className="text-5xl  font-bold text-university-red mb-6">Débouchés professionnels</h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
             Nos diplômés intègrent les meilleures entreprises du secteur technologique avec des
             perspectives d'évolution exceptionnelles.
@@ -101,7 +99,7 @@ const Careers = () => {
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   whileHover={{ y: -5, scale: 1.02 }}
                 >
-                  <Card className="h-full bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Card className="h-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-none border-l-4 border-university-red">
                     <CardHeader>
                       <div className="flex justify-between items-start mb-2">
                         <CardTitle className="font-montserrat font-bold text-university-red text-lg">
@@ -156,7 +154,7 @@ const Careers = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-white p-6 rounded-xl shadow-lg"
+              className="bg-white p-6 shadow-lg border-l-4 border-university-red"
             >
               <div className="space-y-4">
                 {sectors.map((sector, index) => (
