@@ -44,7 +44,7 @@ export default function Activity({
             <p className="text-gray-600 font-montserrat mb-4 leading-relaxed">
               {activity.description}
             </p>
-            <div className="space-y-2">
+            <div className="space-y-2 text-left">
               {activity.highlights.map((highlight, highlightIndex) => (
                 <motion.div
                   key={highlightIndex}
@@ -54,9 +54,9 @@ export default function Activity({
                     duration: 0.4,
                     delay: 1.2 + index * 0.1 + highlightIndex * 0.05,
                   }}
-                  className="flex items-center justify-center text-sm text-university-red font-montserrat font-medium"
+                  className="flex items-center justify-start text-sm text-university-red font-montserrat font-medium"
                 >
-                  <div className="w-2 h-2 bg-university-red rounded-full mr-2"></div>
+                  <div className="w-2 h-2 bg-university-red rounded-full mt-1 mr-2 flex-shrink-0"></div>
                   {highlight}
                 </motion.div>
               ))}
