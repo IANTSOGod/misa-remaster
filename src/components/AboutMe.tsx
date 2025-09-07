@@ -1,6 +1,8 @@
+import { photos } from '@/constants/presentation_carousel';
 import { motion, useInView } from 'framer-motion';
 import { Award, BookOpen, GraduationCap, Users } from 'lucide-react';
 import { useRef } from 'react';
+import PhotoCarousel from './PhotoCarousel';
 
 const AboutMe = () => {
   const ref = useRef(null);
