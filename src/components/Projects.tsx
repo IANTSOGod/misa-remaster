@@ -1,41 +1,32 @@
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { activities } from "@/constants/activities";
-import { projects } from "@/constants/projects";
-import { motion, useInView } from "framer-motion";
-import { ExternalLink, Github, Trophy, Users } from "lucide-react";
-import { useRef } from "react";
-import Activity from "./Activity";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { activities } from '@/constants/activities';
+import { projects } from '@/constants/projects';
+import { motion, useInView } from 'framer-motion';
+import { ExternalLink, Github, Trophy, Users } from 'lucide-react';
+import { useRef } from 'react';
+import Activity from './Activity';
 
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section
-      id="projets"
-      className="py-20 bg-gradient-to-br from-gray-50 to-red-50"
-    >
-      <div className="container mx-auto px-6">
+    <section id="projets" className="py-20 bg-gradient-to-br from-gray-50 to-red-50">
+      <div className="container mx-auto md:px-6 px-2">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center my-32"
         >
           <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
             Projets & Activités
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Découvrez les réalisations exceptionnelles de nos étudiants et la
-            richesse de la vie étudiante au sein de notre formation.
+            Découvrez les réalisations exceptionnelles de nos étudiants et la richesse de la vie
+            étudiante au sein de notre formation.
           </p>
         </motion.div>
 
@@ -43,7 +34,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-20"
+          className="my-32"
         >
           <h3 className="text-4xl font-dancing font-bold text-university-red text-center mb-12">
             Projets étudiants remarquables
@@ -53,18 +44,14 @@ const Projects = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
-                }
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="h-full"
               >
                 <Card className="h-full bg-white shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
                   <CardHeader className="relative">
-                    <div className="text-6xl mb-4 text-center">
-                      {project.image}
-                    </div>
+                    <div className="text-6xl mb-4 text-center">{project.image}</div>
                     <div className="flex justify-between items-start mb-2">
                       <Badge
                         variant="secondary"
@@ -72,9 +59,7 @@ const Projects = () => {
                       >
                         {project.category}
                       </Badge>
-                      <span className="text-sm text-gray-500 font-montserrat">
-                        {project.year}
-                      </span>
+                      <span className="text-sm text-gray-500 font-montserrat">{project.year}</span>
                     </div>
                     <CardTitle className="font-montserrat font-bold text-university-red text-xl">
                       {project.title}
@@ -93,7 +78,7 @@ const Projects = () => {
                         {project.technologies.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-2 py-1 bg-red-100 text-university-red text-xs rounded font-montserrat"
+                            className="px-3 py-1 bg-red-100 text-university-red text-xs rounded font-montserrat"
                           >
                             {tech}
                           </span>
@@ -111,10 +96,7 @@ const Projects = () => {
                             key={achIndex}
                             className="flex items-center text-sm text-gray-600 font-montserrat"
                           >
-                            <Trophy
-                              size={12}
-                              className="text-university-red mr-2"
-                            />
+                            <Trophy size={12} className="text-university-red mr-2" />
                             {achievement}
                           </li>
                         ))}

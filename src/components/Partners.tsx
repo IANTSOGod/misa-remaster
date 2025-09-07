@@ -1,8 +1,8 @@
-import { partners } from "@/constants/parteners";
-import { partnerships } from "@/constants/partenership";
-import { motion, useInView } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { partners } from '@/constants/parteners';
+import { partnerships } from '@/constants/partenership';
+import { motion, useInView } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 const Partners = () => {
   const ref = useRef(null);
@@ -14,9 +14,7 @@ const Partners = () => {
   };
 
   const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + partners.length) % partners.length
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + partners.length) % partners.length);
   };
 
   useEffect(() => {
@@ -35,20 +33,20 @@ const Partners = () => {
 
   return (
     <section id="partenaires" className="py-20 bg-white overflow-hidden">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto md:px-6 px-2">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center my-44"
         >
           <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
             Nos partenaires
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Un réseau d'entreprises prestigieuses qui nous font confiance pour
-            former les talents de demain
+            Un réseau d'entreprises prestigieuses qui nous font confiance pour former les talents de
+            demain
           </p>
         </motion.div>
 
@@ -57,15 +55,13 @@ const Partners = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 my-20"
         >
           {partnerships.map((partnership, index) => (
             <motion.div
               key={index}
               initial={{ scale: 0.8, opacity: 0 }}
-              animate={
-                isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }
-              }
+              animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
               whileHover={{ y: -10, scale: 1.05 }}
               className="text-center p-6 bg-gradient-to-br from-red-50 to-red-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
@@ -83,9 +79,7 @@ const Partners = () => {
               <h4 className="text-lg font-montserrat font-semibold text-gray-800 mb-2">
                 {partnership.title}
               </h4>
-              <p className="text-gray-600 font-montserrat text-sm">
-                {partnership.description}
-              </p>
+              <p className="text-gray-600 font-montserrat text-sm">{partnership.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -95,7 +89,7 @@ const Partners = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-16"
+          className="my-32"
         >
           <h3 className="text-4xl font-dancing font-bold text-center text-university-red mb-12">
             Entreprises Partenaires
@@ -124,7 +118,6 @@ const Partners = () => {
                 const isCenter = position === 0;
                 const isLeft = position === -1;
                 const isRight = position === 1;
-
                 return (
                   <motion.div
                     key={`${partner.name}-${currentIndex}`}
@@ -143,23 +136,23 @@ const Partners = () => {
                       z: isCenter ? 100 : 0,
                     }}
                     transition={{
-                      duration: 0.6,
-                      ease: "easeInOut",
+                      duration: 1,
+                      ease: 'easeInOut',
                     }}
                     className="absolute"
                     style={{
-                      perspective: "1000px",
-                      transformStyle: "preserve-3d",
+                      perspective: '1000px',
+                      transformStyle: 'preserve-3d',
                       zIndex: isCenter ? 20 : 10,
                     }}
                   >
                     <div
                       className={`
-                        w-80 h-72 bg-white rounded-2xl shadow-xl overflow-hidden cursor-pointer
+                        w-80 h-72 bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer
                         ${
                           isCenter
-                            ? "ring-4 ring-university-red ring-opacity-50 shadow-2xl"
-                            : "shadow-lg"
+                            ? 'ring-2 ring-university-red ring-opacity-50 shadow-2xl'
+                            : 'shadow-lg'
                         }
                         hover:shadow-2xl transition-all duration-300
                       `}
@@ -167,8 +160,7 @@ const Partners = () => {
                         if (!isCenter) {
                           const steps = -position;
                           setCurrentIndex(
-                            (prev) =>
-                              (prev + steps + partners.length) % partners.length
+                            (prev) => (prev + steps + partners.length) % partners.length,
                           );
                         }
                       }}
@@ -179,7 +171,7 @@ const Partners = () => {
                       >
                         <div className="absolute inset-0 bg-black bg-opacity-10"></div>
                         <div className="absolute top-4 right-4">
-                          <span className="text-xs bg-white bg-opacity-20 text-white px-2 py-1 rounded-full font-montserrat">
+                          <span className="text-xs bg-white bg-opacity-20 text-white px-3 py-1 rounded-full font-montserrat">
                             {partner.category}
                           </span>
                         </div>
@@ -187,13 +179,13 @@ const Partners = () => {
 
                       {/* Logo Section */}
                       <div className="w-full flex items-center align-middle justify-center -mt-10 absolute">
-                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center align-center shadow-lg text-3xl border-4 border-white">
+                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center align-center shadow-lg text-3xl border-4 border-white overflow-hidden">
                           {partner.logo}
                         </div>
                       </div>
 
                       {/* Content */}
-                      <div className="px-6 pb-6 text-center mt-20">
+                      <div className="md:px-6 px-2 pb-6 text-center mt-20">
                         <h4 className="text-2xl font-montserrat font-bold text-university-red mb-3">
                           {partner.name}
                         </h4>
@@ -204,7 +196,7 @@ const Partners = () => {
 
                       {/* Bottom Accent */}
                       <div
-                        className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${partner.color}`}
+                        className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${partner.color} mx-2 rounded-b-3xl`}
                       ></div>
                     </div>
                   </motion.div>
@@ -214,14 +206,22 @@ const Partners = () => {
 
             {/* Carousel Indicators */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
-              {partners.map((_, index) => (
+              {[
+                currentIndex - 3,
+                currentIndex - 2,
+                currentIndex - 1,
+                currentIndex,
+                currentIndex + 1,
+                currentIndex + 2,
+                currentIndex + 3,
+              ].map((i) => (
                 <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  key={i}
+                  onClick={() => setCurrentIndex(i)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentIndex
-                      ? "bg-university-red scale-125"
-                      : "bg-gray-300 hover:bg-gray-400"
+                    i === currentIndex
+                      ? 'bg-university-red scale-125'
+                      : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                 />
               ))}
@@ -234,14 +234,13 @@ const Partners = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="text-center bg-gradient-to-r from-university-red to-university-red-light p-8 rounded-2xl"
+          className="text-center bg-gradient-to-r from-university-red to-university-red-light p-8 rounded-2xl my-44"
         >
           <h3 className="text-3xl font-dancing font-bold mb-4 text-university-red">
             Rejoignez notre réseau de partenaires
           </h3>
           <p className="text-xl font-montserrat mb-6 text-black opacity-90">
-            Vous êtes une entreprise ? Collaborez avec nous pour former les
-            talents de demain
+            Vous êtes une entreprise ? Collaborez avec nous pour former les talents de demain
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}

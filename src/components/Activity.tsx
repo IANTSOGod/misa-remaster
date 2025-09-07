@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 export default function Activity({
   activities,
@@ -14,6 +14,7 @@ export default function Activity({
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.8, delay: 0.8 }}
+      className="my-44"
     >
       <h3 className="text-4xl font-dancing font-bold text-university-red text-center mb-12">
         Vie étudiante & Activités
@@ -23,9 +24,7 @@ export default function Activity({
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={
-              isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
-            }
+            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
             whileHover={{ y: -10, scale: 1.05 }}
             className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
@@ -48,9 +47,7 @@ export default function Activity({
                 <motion.div
                   key={highlightIndex}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={
-                    isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
-                  }
+                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                   transition={{
                     duration: 0.4,
                     delay: 1.2 + index * 0.1 + highlightIndex * 0.05,

@@ -1,36 +1,36 @@
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { ChevronDown, Code, Cpu, Database } from "lucide-react";
+import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+import { ChevronDown, Code, Cpu, Database } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-white via-red-50 to-red-100 flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen max-w-screen bg-gradient-to-br from-white via-red-50 to-red-100 flex items-center justify-center relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           className="absolute top-20 left-10 text-university-red opacity-20"
           animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         >
           <Code size={60} />
         </motion.div>
         <motion.div
           className="absolute top-40 right-20 text-university-red opacity-20"
           animate={{ y: [-20, 20, -20] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         >
           <Cpu size={80} />
         </motion.div>
         <motion.div
           className="absolute bottom-40 left-20 text-university-red opacity-20"
           animate={{ rotate: -360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
         >
           <Database size={70} />
         </motion.div>
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto md:px-6 px-2 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,8 +52,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Formez-vous aux technologies de demain dans un environnement
-            d'excellence
+            Formez-vous aux technologies de demain dans un environnement d'excellence
           </motion.p>
 
           <motion.div
@@ -66,9 +65,7 @@ const Hero = () => {
               size="lg"
               className="bg-university-red hover:bg-university-red-light hover:text-red-800 hover:bg-white text-white font-montserrat font-semibold px-8 py-4 text-lg animate-pulse-glow"
               onClick={() =>
-                document
-                  .getElementById("aboutMe")
-                  ?.scrollIntoView({ behavior: "smooth" })
+                document.getElementById('aboutMe')?.scrollIntoView({ behavior: 'smooth' })
               }
             >
               Qui sommes-nous ?
@@ -78,9 +75,7 @@ const Hero = () => {
               size="lg"
               className="border-university-red text-university-red hover:bg-university-red hover:text-white hover:bg-red-800 font-montserrat font-semibold px-8 py-4 text-lg"
               onClick={() =>
-                document
-                  .getElementById("parcours")
-                  ?.scrollIntoView({ behavior: "smooth" })
+                document.getElementById('parcours')?.scrollIntoView({ behavior: 'smooth' })
               }
             >
               Voir les parcours
@@ -91,7 +86,7 @@ const Hero = () => {
         <motion.div
           className="absolute left-1/2 mt-20 transform -translate-x-1/2 rounded-full bg-university-red w-[50px] h-[50px] flex items-center justify-center"
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
           <ChevronDown className="text-white" size={32} />
         </motion.div>

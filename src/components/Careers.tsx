@@ -1,12 +1,6 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 const Careers = () => {
   const ref = useRef(null);
@@ -14,81 +8,81 @@ const Careers = () => {
 
   const careers = [
     {
-      title: "Développeur Full-Stack",
-      salary: "35-55k€",
-      growth: "+15%",
+      title: 'Développeur Full-Stack',
+      salary: '35-55k€',
+      growth: '+15%',
       description: "Conception et développement d'applications web complètes",
-      companies: ["Startups", "ESN", "Grandes entreprises"],
+      companies: ['Startups', 'ESN', 'Grandes entreprises'],
     },
     {
-      title: "Data Scientist",
-      salary: "45-70k€",
-      growth: "+25%",
+      title: 'Data Scientist',
+      salary: '45-70k€',
+      growth: '+25%',
       description: "Analyse de données et développement d'algorithmes d'IA",
-      companies: ["GAFAM", "Banques", "Consulting"],
+      companies: ['GAFAM', 'Banques', 'Consulting'],
     },
     {
-      title: "Expert Cybersécurité",
-      salary: "50-80k€",
-      growth: "+30%",
-      description: "Protection des systèmes et audit de sécurité",
-      companies: ["ANSSI", "Défense", "Cybersécurité"],
+      title: 'Expert Cybersécurité',
+      salary: '50-80k€',
+      growth: '+30%',
+      description: 'Protection des systèmes et audit de sécurité',
+      companies: ['ANSSI', 'Défense', 'Cybersécurité'],
     },
     {
-      title: "Architecte Cloud",
-      salary: "55-85k€",
-      growth: "+20%",
+      title: 'Architecte Cloud',
+      salary: '55-85k€',
+      growth: '+20%',
       description: "Conception d'infrastructures cloud et DevOps",
-      companies: ["AWS", "Microsoft", "Google"],
+      companies: ['AWS', 'Microsoft', 'Google'],
     },
     {
-      title: "Chef de Projet IT",
-      salary: "40-65k€",
-      growth: "+12%",
+      title: 'Chef de Projet IT',
+      salary: '40-65k€',
+      growth: '+12%',
       description: "Management d'équipes et pilotage de projets",
-      companies: ["Tous secteurs", "ESN", "Consulting"],
+      companies: ['Tous secteurs', 'ESN', 'Consulting'],
     },
     {
-      title: "Entrepreneur Tech",
-      salary: "Variable",
-      growth: "+∞",
-      description: "Création de startups et innovation technologique",
-      companies: ["Startup", "Incubateurs", "Freelance"],
+      title: 'Entrepreneur Tech',
+      salary: 'Variable',
+      growth: '+∞',
+      description: 'Création de startups et innovation technologique',
+      companies: ['Startup', 'Incubateurs', 'Freelance'],
     },
   ];
 
   const sectors = [
-    { name: "Technologies", percentage: 35, color: "bg-red-500" },
-    { name: "Finance", percentage: 20, color: "bg-red-400" },
-    { name: "Santé", percentage: 15, color: "bg-red-300" },
-    { name: "Industrie", percentage: 12, color: "bg-red-200" },
-    { name: "Consulting", percentage: 10, color: "bg-red-100" },
-    { name: "Autres", percentage: 8, color: "bg-gray-200" },
+    { name: 'Technologies', percentage: 35, color: 'bg-red-500' },
+    { name: 'Finance', percentage: 20, color: 'bg-red-400' },
+    { name: 'Santé', percentage: 15, color: 'bg-red-300' },
+    { name: 'Industrie', percentage: 12, color: 'bg-red-200' },
+    { name: 'Consulting', percentage: 10, color: 'bg-red-100' },
+    { name: 'Autres', percentage: 8, color: 'bg-gray-200' },
   ];
 
   return (
     <section
       id="debouches"
-      className="py-20 bg-gradient-to-br from-gray-50 to-red-50"
+      className="py-20 bg-gradient-to-br from-gray-50 to-red-50 max-w-screen overflow-x-hidden relative"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto md:px-6 px-2">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center my-44"
         >
           <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
             Débouchés professionnels
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Nos diplômés intègrent les meilleures entreprises du secteur
-            technologique avec des perspectives d'évolution exceptionnelles.
+            Nos diplômés intègrent les meilleures entreprises du secteur technologique avec des
+            perspectives d'évolution exceptionnelles.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-8 my-16">
           <div className="lg:col-span-2">
             <motion.h3
               initial={{ opacity: 0, x: -30 }}
@@ -103,9 +97,7 @@ const Careers = () => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
-                  animate={
-                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                  }
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   whileHover={{ y: -5, scale: 1.02 }}
                 >
@@ -137,7 +129,7 @@ const Careers = () => {
                           {career.companies.map((company, companyIndex) => (
                             <span
                               key={companyIndex}
-                              className="px-2 py-1 bg-red-100 text-university-red text-sm rounded font-montserrat"
+                              className="px-3 py-1 bg-red-100 text-university-red text-sm rounded font-montserrat"
                             >
                               {company}
                             </span>
@@ -162,9 +154,7 @@ const Careers = () => {
             </motion.h3>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={
-                isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
-              }
+              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-white p-6 rounded-xl shadow-lg"
             >
@@ -173,7 +163,7 @@ const Careers = () => {
                   <motion.div
                     key={index}
                     initial={{ width: 0 }}
-                    animate={isInView ? { width: "100%" } : { width: 0 }}
+                    animate={isInView ? { width: '100%' } : { width: 0 }}
                     transition={{ duration: 1, delay: 0.6 + index * 0.1 }}
                     className="space-y-2"
                   >
@@ -188,11 +178,7 @@ const Careers = () => {
                     <div className="w-full bg-gray-200 rounded-full h-3">
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={
-                          isInView
-                            ? { width: `${sector.percentage}%` }
-                            : { width: 0 }
-                        }
+                        animate={isInView ? { width: `${sector.percentage}%` } : { width: 0 }}
                         transition={{ duration: 1.5, delay: 0.8 + index * 0.1 }}
                         className={`h-3 rounded-full ${sector.color}`}
                       ></motion.div>

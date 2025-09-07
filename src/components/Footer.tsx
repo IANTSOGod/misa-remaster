@@ -1,21 +1,19 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-university-red text-white mt-20">
-      <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="container mx-auto md:px-6 px-2 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         <div>
           <div className="flex items-center gap-3 mb-4">
             <div className="p-3 bg-white rounded-lg shadow-lg">
               <img src="/logo.png" className="w-10 h-10"></img>
             </div>
-            <h2 className="font-dancing font-bold text-2xl">
-              Mention Informatique
-            </h2>
+            <h2 className="font-dancing font-bold text-2xl">Mention Informatique</h2>
           </div>
           <p className="text-gray-200 font-montserrat text-sm leading-relaxed">
-            Une formation d’excellence pour façonner les ingénieurs de demain,
-            alliant rigueur académique et innovation technologique.
+            Une formation d’excellence pour façonner les ingénieurs de demain, alliant rigueur
+            académique et innovation technologique.
           </p>
         </div>
 
@@ -25,34 +23,22 @@ const Footer = () => {
           </h3>
           <ul className="space-y-3">
             <li>
-              <a
-                href="#presentation"
-                className="text-gray-200 hover:text-white transition-colors"
-              >
+              <a href="#presentation" className="text-gray-200 hover:text-white transition-colors">
                 Présentation
               </a>
             </li>
             <li>
-              <a
-                href="#parcours"
-                className="text-gray-200 hover:text-white transition-colors"
-              >
+              <a href="#parcours" className="text-gray-200 hover:text-white transition-colors">
                 Parcours
               </a>
             </li>
             <li>
-              <a
-                href="#programmes"
-                className="text-gray-200 hover:text-white transition-colors"
-              >
+              <a href="#programmes" className="text-gray-200 hover:text-white transition-colors">
                 Programmes
               </a>
             </li>
             <li>
-              <a
-                href="#debouches"
-                className="text-gray-200 hover:text-white transition-colors"
-              >
+              <a href="#debouches" className="text-gray-200 hover:text-white transition-colors">
                 Débouchés
               </a>
             </li>
@@ -81,14 +67,11 @@ const Footer = () => {
       </div>
 
       <div className="bg-university-red-light py-4">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-100">
+        <div className="container mx-auto md:px-6 px-2 flex flex-col md:flex-row justify-between items-center text-sm text-gray-100">
           <p className="mb-2 md:mb-0">
-            © {new Date().getFullYear()} Mention Informatique. Tous droits
-            réservés.
+            © {new Date().getFullYear()} Mention Informatique. Tous droits réservés.
           </p>
-          <p className="text-gray-200">
-            Développé avec ❤️ par l’équipe Informatique
-          </p>
+          <p className="text-gray-200">Développé avec ❤️ par l’équipe Informatique</p>
         </div>
       </div>
     </footer>

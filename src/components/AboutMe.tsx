@@ -1,6 +1,6 @@
-import { motion, useInView } from "framer-motion";
-import { Award, BookOpen, GraduationCap, Users } from "lucide-react";
-import { useRef } from "react";
+import { motion, useInView } from 'framer-motion';
+import { Award, BookOpen, GraduationCap, Users } from 'lucide-react';
+import { useRef } from 'react';
 
 const AboutMe = () => {
   const ref = useRef(null);
@@ -9,29 +9,31 @@ const AboutMe = () => {
   const stats = [
     {
       icon: GraduationCap,
-      number: "95%",
+      number: '95%',
       label: "Taux d'insertion professionnelle",
     },
-    { icon: Users, number: "200+", label: "Étudiants par promotion" },
-    { icon: Award, number: "15+", label: "Années d'excellence" },
-    { icon: BookOpen, number: "30+", label: "Modules spécialisés" },
+    { icon: Users, number: '200+', label: 'Étudiants par promotion' },
+    { icon: Award, number: '15+', label: "Années d'excellence" },
+    { icon: BookOpen, number: '30+', label: 'Modules spécialisés' },
   ];
 
   return (
-    <section id="aboutMe" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="aboutMe" className="py-20 bg-white max-w-screen overflow-x-hidden relative">
+      <div className="container mx-auto md:px-6 px-2">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center min-h-screen flex flex-col justify-center"
         >
-          <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
+          <h2 className="text-5xl font-dancing font-bold text-university-red lg:mb-32 mb-14">
             Qui sommes-nous ?
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-          Fondée en 1996 dans le département de Mathématiques et Informatique des Sciences de l’Université d’Antananarivo, avec le soutien du projet PRESUP (Programme de Renforcement de l’Enseignement Supérieur) et la Coopération Française. 
+            Fondée en 1996 dans le département de Mathématiques et Informatique des Sciences de
+            l’Université d’Antananarivo, avec le soutien du projet PRESUP (Programme de Renforcement
+            de l’Enseignement Supérieur) et la Coopération Française.
           </p>
         </motion.div>
 
@@ -40,13 +42,17 @@ const AboutMe = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="my-32"
           >
             <h3 className="text-3xl font-montserrat font-bold text-university-red mb-6">
-            Évolutions vers le LMD
+              Évolutions vers le LMD
             </h3>
             <div className="space-y-4 text-gray-700 font-montserrat">
               <p className="text-lg leading-relaxed">
-              Ayant basculé dans le système LMD depuis 2014, la Maîtrise en Informatique et Statistique Appliquées est devenue Mathématiques Informatique et Statistique Appliquées. La MISA propose une formation orientée recherche pour les étudiants en M2, dont la première promotion est sortie en 2016.
+                Ayant basculé dans le système LMD depuis 2014, la Maîtrise en Informatique et
+                Statistique Appliquées est devenue Mathématiques Informatique et Statistique
+                Appliquées. La MISA propose une formation orientée recherche pour les étudiants en
+                M2, dont la première promotion est sortie en 2016.
               </p>
               {/* <p className="text-lg leading-relaxed">
                 Notre approche pédagogique privilégie l'apprentissage par
@@ -68,13 +74,17 @@ const AboutMe = () => {
             className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl"
           >
             <h3 className="text-3xl font-montserrat font-bold text-university-red mb-6">
-            Expansion et Innovation           
-             </h3>
-             <div className="space-y-4 text-gray-700 font-montserrat">
+              Expansion et Innovation
+            </h3>
+            <div className="space-y-4 text-gray-700 font-montserrat">
               <p className="text-lg leading-relaxed">
-              À la fin de l’année 2022, la MISA introduit la Mention Informatique et Technologie, offrant une formation complète de la première année (L1) à la troisième année (L3). Cette initiative marque une nouvelle ère pour la MISA, consolidant son statut d’institution pionnière dans le domaine de l’enseignement supérieur en informatique et technologie à Madagascar.
+                À la fin de l’année 2022, la MISA introduit la Mention Informatique et Technologie,
+                offrant une formation complète de la première année (L1) à la troisième année (L3).
+                Cette initiative marque une nouvelle ère pour la MISA, consolidant son statut
+                d’institution pionnière dans le domaine de l’enseignement supérieur en informatique
+                et technologie à Madagascar.
               </p>
-              </div>
+            </div>
           </motion.div>
         </div>
 

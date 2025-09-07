@@ -1,14 +1,8 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { motion, useInView } from "framer-motion";
-import { Calendar, CheckCircle, Clock, FileText, Users } from "lucide-react";
-import { useRef } from "react";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { motion, useInView } from 'framer-motion';
+import { Calendar, CheckCircle, FileText, Users } from 'lucide-react';
+import { useRef } from 'react';
 
 const JoinUs = () => {
   const ref = useRef(null);
@@ -17,19 +11,17 @@ const JoinUs = () => {
   const admissionSteps = [
     {
       icon: FileText,
-      title: "Dossier de candidature",
-      description:
-        "Soumettez votre dossier complet avec relevés de notes ",
-      deadline: "",
-      status: "required",
+      title: 'Dossier de candidature',
+      description: 'Soumettez votre dossier complet avec relevés de notes ',
+      deadline: '',
+      status: 'required',
     },
     {
       icon: Users,
-      title: "Sélection de dossier",
-      description:
-        "Votre dossier sera examiner et selectionner par les professeurs",
-      deadline: "",
-      status: "conditional",
+      title: 'Sélection de dossier',
+      description: 'Votre dossier sera examiner et selectionner par les professeurs',
+      deadline: '',
+      status: 'conditional',
     },
     // {
     //   icon: CheckCircle,
@@ -41,24 +33,24 @@ const JoinUs = () => {
     {
       icon: Calendar,
       title: "Résultats d'admission",
-      description: "Notification des résultats et procédure de préinscription et inscription ",
-      deadline: "",
-      status: "final",
+      description: 'Notification des résultats et procédure de préinscription et inscription ',
+      deadline: '',
+      status: 'final',
     },
   ];
 
   const requirements = [
-    "Baccalauréat scientifique ou équivalent",
+    'Baccalauréat scientifique ou équivalent',
     // "Moyenne générale ≥ 12/20",
-    "Bon niveau en mathématiques",
+    'Bon niveau en mathématiques',
     "Motivation pour l'informatique",
   ];
 
   const documents = [
-    "Demande de préinscription remplie et signée par le candidat",
-    "Une copie certifiée conforme au relevé des notes du Bacclauréat",
-    "Une acte de naissance moins de trois mois ou CIN",
-    "Reçue de versement pour sélection",
+    'Demande de préinscription remplie et signée par le candidat',
+    'Une copie certifiée conforme au relevé des notes du Bacclauréat',
+    'Une acte de naissance moins de trois mois ou CIN',
+    'Reçue de versement pour sélection',
   ];
 
   return (
@@ -69,26 +61,26 @@ const JoinUs = () => {
           className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, #991b1b 1px, transparent 0)`,
-            backgroundSize: "40px 40px",
+            backgroundSize: '40px 40px',
           }}
         ></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto md:px-6 px-2 relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center my-32"
         >
           <h2 className="text-5xl font-dancing font-bold text-university-red mb-6">
             Comment nous rejoindre ?
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Intégrez notre formation d'excellence et donnez vie à vos ambitions
-            dans le domaine de l'informatique. Découvrez notre processus
-            d'admission transparent et nos critères de sélection.
+            Intégrez notre formation d'excellence et donnez vie à vos ambitions dans le domaine de
+            l'informatique. Découvrez notre processus d'admission transparent et nos critères de
+            sélection.
           </p>
         </motion.div>
 
@@ -97,7 +89,7 @@ const JoinUs = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
+          className="my-32"
         >
           <h3 className="text-4xl font-dancing font-bold text-university-red text-center mb-12">
             Processus d'admission
@@ -107,9 +99,7 @@ const JoinUs = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
-                }
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
               >
@@ -147,7 +137,7 @@ const JoinUs = () => {
         </motion.div>
 
         {/* Prérequis et documents */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 my-44">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -166,9 +156,7 @@ const JoinUs = () => {
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
-                      animate={
-                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
-                      }
+                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                       transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
                       className="flex items-center gap-3 font-montserrat text-gray-700"
                     >
@@ -199,9 +187,7 @@ const JoinUs = () => {
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
-                      animate={
-                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
-                      }
+                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                       transition={{ duration: 0.4, delay: 1 + index * 0.1 }}
                       className="flex items-center gap-3 font-montserrat text-gray-700"
                     >
@@ -224,19 +210,14 @@ const JoinUs = () => {
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-3xl font-dancing font-bold mb-4">
-                Prêt à candidater ?
-              </h3>
+              <h3 className="text-3xl font-dancing font-bold mb-4">Prêt à candidater ?</h3>
               <p className="text-xl font-montserrat mb-6 opacity-90">
-                Rejoignez notre communauté d'étudiants passionnés et lancez
-                votre carrière dans l'informatique !
+                Rejoignez notre communauté d'étudiants passionnés et lancez votre carrière dans
+                l'informatique !
               </p>
             </div>
             <div className="text-center">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   size="lg"
                   className="bg-white text-university-red hover:bg-gray-100 font-montserrat font-bold px-8 py-4 text-lg mb-4"

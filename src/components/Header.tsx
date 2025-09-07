@@ -1,23 +1,23 @@
-import { navItems } from "@/constants/navitems";
-import { motion } from "framer-motion";
-import { ChevronDown, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { navItems } from '@/constants/navitems';
+import { motion } from 'framer-motion';
+import { ChevronDown, Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-  const [hoveredDropdown, setHoveredDropdown] = useState("");
+  const [activeSection, setActiveSection] = useState('');
+  const [hoveredDropdown, setHoveredDropdown] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       const allSections = [
-        "presentation",
-        "parcours",
-        "programmes",
-        "debouches",
-        "partenaires",
-        "projets",
-        "rejoindre",
+        'presentation',
+        'parcours',
+        'programmes',
+        'debouches',
+        'partenaires',
+        'projets',
+        'rejoindre',
       ];
       const sections = allSections.map((id) => document.getElementById(id));
       const scrollPos = window.scrollY + 100;
@@ -33,8 +33,8 @@ const Header = () => {
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Fonction corrigée
@@ -43,11 +43,11 @@ const Header = () => {
     if (element) {
       // Ferme le menu mobile avant de scroller
       setIsOpen(false);
-      setHoveredDropdown("");
+      setHoveredDropdown('');
 
       // Petit délai pour laisser l'animation fermer le menu
       setTimeout(() => {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: 'smooth' });
       }, 300);
     }
   };
@@ -57,7 +57,7 @@ const Header = () => {
     if (item.hasDropdown) {
       return item.dropdownItems.some(
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (dropItem: any) => dropItem.id === activeSection
+        (dropItem: any) => dropItem.id === activeSection,
       );
     }
     return item.id === activeSection;
@@ -70,12 +70,9 @@ const Header = () => {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-red-100"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto md:px-6 px-2">
         <div className="flex items-center justify-between h-20">
-          <motion.div
-            className="flex items-center gap-4"
-            whileHover={{ scale: 1.02 }}
-          >
+          <motion.div className="flex items-center gap-4" whileHover={{ scale: 1.02 }}>
             <div className="p-3 bg-gradient-to-r from-university-red to-university-red-light rounded-xl shadow-lg">
               <img src="/logo.png" className="w-10 h-10"></img>
             </div>
@@ -102,10 +99,10 @@ const Header = () => {
                 onClick={() => setHoveredDropdown(item.id)} // ouvre au hover
               >
                 <motion.button
-                  className={`flex items-center gap-2 px-6 py-3 rounded-xl font-montserrat font-semibold transition-all duration-300 ${
+                  className={`flex items-center gap-2 md:px-6 px-2 py-3 rounded-xl font-montserrat font-semibold transition-all duration-300 ${
                     isItemActive(item)
-                      ? "bg-university-red text-white shadow-lg"
-                      : "text-gray-700 hover:bg-red-50 hover:text-university-red"
+                      ? 'bg-university-red text-white shadow-lg'
+                      : 'text-gray-700 hover:bg-red-50 hover:text-university-red'
                   }`}
                   whileHover={{ y: -2 }}
                 >
@@ -133,20 +130,18 @@ const Header = () => {
                     }}
                     transition={{ duration: 0.2 }}
                     className={`absolute top-full left-0 mt-2 bg-white rounded-xl shadow-xl border border-red-100 overflow-hidden min-w-48 ${
-                      hoveredDropdown === item.id
-                        ? "pointer-events-auto"
-                        : "pointer-events-none"
+                      hoveredDropdown === item.id ? 'pointer-events-auto' : 'pointer-events-none'
                     }`}
-                    onMouseLeave={() => setHoveredDropdown("")}
+                    onMouseLeave={() => setHoveredDropdown('')}
                   >
                     {item.dropdownItems.map((dropItem, index) => (
                       <motion.button
                         key={dropItem.id}
                         onClick={() => scrollToSection(dropItem.id)}
-                        className={`w-full text-left px-6 py-4 font-montserrat font-medium transition-all duration-200 border-b border-red-50 last:border-b-0 ${
+                        className={`w-full text-left md:px-6 px-2 py-4 font-montserrat font-medium transition-all duration-200 border-b border-red-50 last:border-b-0 ${
                           activeSection === dropItem.id
-                            ? "bg-university-red text-white"
-                            : "text-gray-700 hover:bg-red-50 hover:text-university-red"
+                            ? 'bg-university-red text-white'
+                            : 'text-gray-700 hover:bg-red-50 hover:text-university-red'
                         }`}
                         whileHover={{ x: 5 }}
                         initial={{ opacity: 0, x: -10 }}
@@ -177,7 +172,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         <motion.nav
           initial={false}
-          animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+          animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
           className="lg:hidden overflow-hidden bg-white border-t border-red-100"
         >
           <div className="py-6 space-y-2">
@@ -192,8 +187,8 @@ const Header = () => {
                     onClick={() => scrollToSection(dropItem.id)}
                     className={`block w-full text-left px-8 py-3 font-montserrat font-medium transition-all duration-200 rounded-lg mx-4 ${
                       activeSection === dropItem.id
-                        ? "bg-university-red text-white"
-                        : "text-gray-700 hover:bg-red-50 hover:text-university-red"
+                        ? 'bg-university-red text-white'
+                        : 'text-gray-700 hover:bg-red-50 hover:text-university-red'
                     }`}
                   >
                     {dropItem.label}
