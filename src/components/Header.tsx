@@ -11,7 +11,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const allSections = [
-        'presentation',
+        'aboutMe',
         'parcours',
         'programmes',
         'debouches',

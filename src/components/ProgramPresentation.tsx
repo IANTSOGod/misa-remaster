@@ -18,7 +18,7 @@ const ProgramPresentation = () => {
   ];
 
   return (
-    <section id="presentation" className="py-20 bg-white max-w-screen overflow-x-hidden relative">
+    <section id="parcours" className="py-20 bg-white max-w-screen overflow-x-hidden relative">
       <div className="container mx-auto md:px-6 px-2">
         <div className="flex min-h-screen flex-col justify-center gap-20">
           <motion.div
