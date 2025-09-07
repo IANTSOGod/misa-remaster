@@ -4,7 +4,7 @@ export const navItems = [
       label: "Formation",
       hasDropdown: true,
       dropdownItems: [
-        { id: "presentation", label: "Présentation" },
+        { id: "aboutMe", label: "Présentation" },
         { id: "parcours", label: "Parcours" },
         { id: "programmes", label: "Programmes" },
       ],
