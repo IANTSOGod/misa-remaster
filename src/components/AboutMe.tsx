@@ -121,6 +121,7 @@ const AboutMe = () => {
           ))}
         </motion.div> */}
       </div>
+      <PhotoCarousel photos={photos} />
     </section>
   );
 };
