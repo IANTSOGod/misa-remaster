@@ -17,7 +17,7 @@ export const partnerships = [
     icon: Building2,
     title: "Entreprises Partenaires",
     description: "Réseau d'entreprises pour l'insertion professionnelle",
-    number: "150+",
+    number: "20+",
   },
   {
     icon: Award,
