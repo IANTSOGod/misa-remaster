@@ -25,7 +25,7 @@ export default function UniversityRoadmap() {
       description:
         "Formation axée sur la recherche, l'innovation technologique et les applications scientifiques de l'informatique.",
       icon: Brain,
-      color: "bg-gradient-to-br from-red-800 via-rose-500 to-pink-600",
+      color: "bg-gradient-to-br from-red-800 to-pink-600",
       m1Content: [
         "Intelligence Artificielle Avancée",
         "Apprentissage Automatique",
@@ -50,7 +50,7 @@ export default function UniversityRoadmap() {
       description:
         "Formation professionnalisante orientée vers les technologies émergentes et le développement d'applications modernes.",
       icon: Globe,
-      color: "bg-gradient-to-br from-red-800 via-rose-500 to-pink-600",
+      color: "bg-gradient-to-br from-red-800 to-pink-600",
       m1Content: [
         "Développement Web Full-Stack",
         "Applications Mobile (iOS/Android)",
