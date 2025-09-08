@@ -1,5 +1,5 @@
-import { Brain, Globe, Rocket, Sparkles, Star } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import { Brain, Globe, Rocket, Sparkles, Star } from "lucide-react";
+import React, { useEffect, useState } from "react";
 
 interface SpecializationData {
   id: string;
@@ -19,53 +19,53 @@ export default function UniversityRoadmap() {
 
   const specializations: SpecializationData[] = [
     {
-      id: 'misa',
-      name: 'MISA',
-      fullName: 'Mathématiques informatique et statistique appliqué',
+      id: "misa",
+      name: "MISA",
+      fullName: "Mathématiques informatique et statistique appliqué",
       description:
         "Formation axée sur la recherche, l'innovation technologique et les applications scientifiques de l'informatique.",
       icon: Brain,
-      color: 'bg-gradient-to-br from-red-500 via-rose-500 to-pink-500',
+      color: "bg-gradient-to-br from-red-800 via-rose-500 to-pink-600",
       m1Content: [
-        'Intelligence Artificielle Avancée',
-        'Apprentissage Automatique',
-        'Traitement du Signal Numérique',
-        'Modélisation et Simulation',
-        'Calcul Scientifique',
-        'Méthodes Formelles',
+        "Intelligence Artificielle Avancée",
+        "Apprentissage Automatique",
+        "Traitement du Signal Numérique",
+        "Modélisation et Simulation",
+        "Calcul Scientifique",
+        "Méthodes Formelles",
       ],
       m2Content: [
-        'Deep Learning et Réseaux de Neurones',
-        'Vision par Ordinateur',
-        'Traitement Automatique du Langage',
-        'Bioinformatique',
-        'Recherche et Innovation',
-        'Projet de Recherche (6 mois)',
+        "Deep Learning et Réseaux de Neurones",
+        "Vision par Ordinateur",
+        "Traitement Automatique du Langage",
+        "Bioinformatique",
+        "Recherche et Innovation",
+        "Projet de Recherche (6 mois)",
       ],
     },
     {
-      id: 'int',
-      name: 'INT',
-      fullName: 'Innovation et technologie',
+      id: "int",
+      name: "INT",
+      fullName: "Innovation et technologie",
       description:
         "Formation professionnalisante orientée vers les technologies émergentes et le développement d'applications modernes.",
       icon: Globe,
-      color: 'bg-gradient-to-br from-red-600 via-rose-600 to-red-500',
+      color: "bg-gradient-to-br from-red-800 via-rose-500 to-pink-600",
       m1Content: [
-        'Développement Web Full-Stack',
-        'Applications Mobile (iOS/Android)',
-        'Cloud Computing et DevOps',
-        'Cybersécurité',
-        'IoT et Systèmes Embarqués',
-        'UX/UI Design',
+        "Développement Web Full-Stack",
+        "Applications Mobile (iOS/Android)",
+        "Cloud Computing et DevOps",
+        "Cybersécurité",
+        "IoT et Systèmes Embarqués",
+        "UX/UI Design",
       ],
       m2Content: [
-        'Microservices et Architecture Distribuée',
-        'Blockchain et Cryptomonnaies',
-        'Réalité Virtuelle/Augmentée',
-        'Big Data et Analytics',
-        'Stage en entreprise (6 mois)',
-        'Projet industriel',
+        "Microservices et Architecture Distribuée",
+        "Blockchain et Cryptomonnaies",
+        "Réalité Virtuelle/Augmentée",
+        "Big Data et Analytics",
+        "Stage en entreprise (6 mois)",
+        "Projet industriel",
       ],
     },
   ];
@@ -92,7 +92,9 @@ export default function UniversityRoadmap() {
     return (
       <div
         className={`text-center mb-20 transition-all duration-1500 transform my-32 ${
-          showHero ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'
+          showHero
+            ? "opacity-100 translate-y-0 scale-100"
+            : "opacity-0 translate-y-12 scale-95"
         }`}
       >
         {/* Decorative elements */}
@@ -102,7 +104,7 @@ export default function UniversityRoadmap() {
           <div className="absolute -top-6 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-500" />
 
           {/* Main hero content */}
-          <div className="relative bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 text-white px-12 py-16 shadow-2xl transform hover:scale-[1.02] transition-all duration-500 overflow-hidden">
+          <div className="relative bg-gradient-to-r from-red-800 to-pink-600 text-white px-12 py-16 shadow-2xl transform hover:scale-[1.02] transition-all duration-500 overflow-hidden">
             {/* Background decorations */}
             <div className="absolute top-0 left-0 w-full h-full opacity-10">
               <div className="absolute top-8 left-8 w-32 h-32 bg-white rounded-full" />
@@ -122,7 +124,8 @@ export default function UniversityRoadmap() {
               <div className="flex items-center justify-center space-x-3 mb-8">
                 <Rocket className="w-8 h-8" />
                 <p className="text-base sm:text-lg md:text-2xl font-montserrat font-medium">
-                  Après la licence dans la mention MIT, découvrez nos nouvelles spécialités
+                  Après la licence dans la mention MIT, découvrez nos nouvelles
+                  spécialités
                 </p>
                 <Rocket className="w-8 h-8" />
               </div>
@@ -161,15 +164,19 @@ export default function UniversityRoadmap() {
 
     return (
       <div
-        className={`transform transition-all duration-1000 delay-${index * 200} ${
+        className={`transform transition-all duration-1000 delay-${
+          index * 200
+        } ${
           isVisible
-            ? 'opacity-100 translate-y-0 scale-100 rotate-0'
-            : 'opacity-0 translate-y-16 scale-90 rotate-3'
+            ? "opacity-100 translate-y-0 scale-100 rotate-0"
+            : "opacity-0 translate-y-16 scale-90 rotate-3"
         }`}
       >
         <div className="bg-white shadow-2xl hover:shadow-3xl transition-all duration-700 transform lg:hover:scale-[1.03] lg:hover:-rotate-1 overflow-hidden group">
           {/* Header with gradient */}
-          <div className={`${spec.color} p-3 text-white relative overflow-hidden h-fit`}>
+          <div
+            className={`${spec.color} p-3 text-white relative overflow-hidden h-fit`}
+          >
             {/* Animated background elements */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-700" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-white opacity-5 rounded-full -ml-16 -mb-16 group-hover:scale-110 transition-transform duration-700" />
@@ -264,7 +271,7 @@ export default function UniversityRoadmap() {
         {/* Specializations */}
         <div
           className={`grid grid-cols-1 xl:grid-cols-2 gap-12 transition-all duration-1000 my-32 ${
-            showSpecializations ? 'opacity-100' : 'opacity-0'
+            showSpecializations ? "opacity-100" : "opacity-0"
           }`}
         >
           {specializations.map((spec, index) => (
